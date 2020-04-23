@@ -10,3 +10,8 @@ const squareA = (tall) => tall * tall
 
 
 console.log(squareA(17))
+
+// Hvis vi har flere parametre
+const fler = (name1, name2) => 'Hei ' + name1 + ' og' + name2
+
+console.log(fler('Simon', 'Per'))
