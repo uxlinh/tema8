@@ -380,27 +380,27 @@ var app = (function () {
     			button1.textContent = "Keep";
     			t8 = space();
     			img1 = element("img");
-    			attr_dev(h10, "class", "h1-start svelte-1drnmu3");
+    			attr_dev(h10, "class", "h1-start svelte-6yyobw");
     			add_location(h10, file, 27, 3, 543);
-    			attr_dev(button0, "class", "btn-start svelte-1drnmu3");
+    			attr_dev(button0, "class", "btn-start svelte-6yyobw");
     			add_location(button0, file, 28, 3, 620);
-    			attr_dev(img0, "class", "img-letgo svelte-1drnmu3");
+    			attr_dev(img0, "class", "img-letgo svelte-6yyobw");
     			if (img0.src !== (img0_src_value = "./assets/dandelion.png")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Let Go Picture");
     			add_location(img0, file, 29, 3, 698);
-    			attr_dev(div0, "class", "letgo svelte-1drnmu3");
+    			attr_dev(div0, "class", "letgo svelte-6yyobw");
     			add_location(div0, file, 26, 2, 520);
-    			attr_dev(h11, "class", "h1-start svelte-1drnmu3");
+    			attr_dev(h11, "class", "h1-start svelte-6yyobw");
     			add_location(h11, file, 32, 3, 805);
-    			attr_dev(button1, "class", "btn-start svelte-1drnmu3");
+    			attr_dev(button1, "class", "btn-start svelte-6yyobw");
     			add_location(button1, file, 33, 3, 879);
-    			attr_dev(img1, "class", "img-keep svelte-1drnmu3");
+    			attr_dev(img1, "class", "img-keep svelte-6yyobw");
     			if (img1.src !== (img1_src_value = "./assets/keep.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Keep Picture");
     			add_location(img1, file, 34, 3, 954);
-    			attr_dev(div1, "class", "keep svelte-1drnmu3");
+    			attr_dev(div1, "class", "keep svelte-6yyobw");
     			add_location(div1, file, 31, 2, 783);
-    			attr_dev(div2, "class", "choose svelte-1drnmu3");
+    			attr_dev(div2, "class", "choose svelte-6yyobw");
     			add_location(div2, file, 25, 1, 496);
     		},
     		m: function mount(target, anchor) {
@@ -462,16 +462,16 @@ var app = (function () {
     			t2 = space();
     			button = element("button");
     			button.textContent = "I have recognised my thoughts";
-    			attr_dev(h1, "class", "svelte-1drnmu3");
+    			attr_dev(h1, "class", "svelte-6yyobw");
     			add_location(h1, file, 42, 3, 1117);
     			attr_dev(textarea, "cols", "45");
     			attr_dev(textarea, "rows", "15");
     			attr_dev(textarea, "placeholder", "Write down your thoughts...");
-    			attr_dev(textarea, "class", "svelte-1drnmu3");
+    			attr_dev(textarea, "class", "svelte-6yyobw");
     			add_location(textarea, file, 43, 3, 1173);
-    			attr_dev(button, "class", "svelte-1drnmu3");
+    			attr_dev(button, "class", "svelte-6yyobw");
     			add_location(button, file, 44, 3, 1276);
-    			attr_dev(div, "class", "writeletgo svelte-1drnmu3");
+    			attr_dev(div, "class", "writeletgo svelte-6yyobw");
     			add_location(div, file, 41, 2, 1089);
     		},
     		m: function mount(target, anchor) {
@@ -554,25 +554,25 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Accept & Let go";
     			attr_dev(q, "id", "b");
-    			attr_dev(q, "class", "svelte-1drnmu3");
+    			attr_dev(q, "class", "svelte-6yyobw");
     			add_location(q, file, 50, 27, 1532);
-    			attr_dev(p0, "class", "acceptText svelte-1drnmu3");
+    			attr_dev(p0, "class", "acceptText svelte-6yyobw");
     			add_location(p0, file, 50, 5, 1510);
-    			attr_dev(div0, "class", "acceptGuidance svelte-1drnmu3");
+    			attr_dev(div0, "class", "acceptGuidance svelte-6yyobw");
     			add_location(div0, file, 49, 4, 1476);
-    			attr_dev(h1, "class", "svelte-1drnmu3");
+    			attr_dev(h1, "class", "svelte-6yyobw");
     			add_location(h1, file, 53, 5, 1614);
-    			attr_dev(p1, "class", "svelte-1drnmu3");
+    			attr_dev(p1, "class", "svelte-6yyobw");
     			add_location(p1, file, 54, 5, 1644);
-    			attr_dev(p2, "class", "svelte-1drnmu3");
+    			attr_dev(p2, "class", "svelte-6yyobw");
     			add_location(p2, file, 55, 5, 1699);
-    			attr_dev(p3, "class", "svelte-1drnmu3");
+    			attr_dev(p3, "class", "svelte-6yyobw");
     			add_location(p3, file, 57, 5, 1807);
-    			attr_dev(button, "class", "svelte-1drnmu3");
+    			attr_dev(button, "class", "svelte-6yyobw");
     			add_location(button, file, 59, 5, 1848);
-    			attr_dev(div1, "class", "acceptGuidance svelte-1drnmu3");
+    			attr_dev(div1, "class", "acceptGuidance svelte-6yyobw");
     			add_location(div1, file, 52, 4, 1580);
-    			attr_dev(div2, "class", "acceptletgo svelte-1drnmu3");
+    			attr_dev(div2, "class", "acceptletgo svelte-6yyobw");
     			set_style(div2, "background-image", "url('" + bgAccept + "')");
     			add_location(div2, file, 48, 2, 1402);
     		},
@@ -630,12 +630,12 @@ var app = (function () {
     			h1.textContent = "Your thoughts are flown into space";
     			t1 = space();
     			button = element("button");
-    			button.textContent = "Add more thoughts";
-    			attr_dev(h1, "class", "svelte-1drnmu3");
+    			button.textContent = "Back to home";
+    			attr_dev(h1, "class", "svelte-6yyobw");
     			add_location(h1, file, 65, 3, 2062);
-    			attr_dev(button, "class", "svelte-1drnmu3");
+    			attr_dev(button, "class", "svelte-6yyobw");
     			add_location(button, file, 66, 3, 2109);
-    			attr_dev(div, "class", "intospace svelte-1drnmu3");
+    			attr_dev(div, "class", "intospace svelte-6yyobw");
     			set_style(div, "background-image", "url('" + bgSpace + "')");
     			add_location(div, file, 64, 2, 1992);
     		},
@@ -684,16 +684,16 @@ var app = (function () {
     			t2 = space();
     			button = element("button");
     			button.textContent = "Keep thoughts";
-    			attr_dev(h1, "class", "svelte-1drnmu3");
-    			add_location(h1, file, 73, 3, 2260);
+    			attr_dev(h1, "class", "svelte-6yyobw");
+    			add_location(h1, file, 73, 3, 2255);
     			attr_dev(textarea, "cols", "45");
     			attr_dev(textarea, "rows", "15");
-    			attr_dev(textarea, "class", "svelte-1drnmu3");
-    			add_location(textarea, file, 74, 3, 2382);
-    			attr_dev(button, "class", "svelte-1drnmu3");
-    			add_location(button, file, 75, 3, 2443);
-    			attr_dev(div, "class", "writekeep svelte-1drnmu3");
-    			add_location(div, file, 72, 2, 2231);
+    			attr_dev(textarea, "class", "svelte-6yyobw");
+    			add_location(textarea, file, 74, 3, 2377);
+    			attr_dev(button, "class", "svelte-6yyobw");
+    			add_location(button, file, 75, 3, 2438);
+    			attr_dev(div, "class", "writekeep svelte-6yyobw");
+    			add_location(div, file, 72, 2, 2226);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -771,25 +771,25 @@ var app = (function () {
     			t9 = space();
     			button2 = element("button");
     			button2.textContent = "See your kept thoughts";
-    			attr_dev(h1, "class", "svelte-1drnmu3");
-    			add_location(h1, file, 80, 3, 2668);
-    			attr_dev(span0, "class", "svelte-1drnmu3");
-    			add_location(span0, file, 81, 6, 2692);
-    			attr_dev(span1, "class", "svelte-1drnmu3");
-    			add_location(span1, file, 81, 33, 2719);
-    			attr_dev(p, "class", "svelte-1drnmu3");
-    			add_location(p, file, 81, 3, 2689);
-    			attr_dev(button0, "class", "svelte-1drnmu3");
-    			add_location(button0, file, 83, 4, 2774);
-    			attr_dev(button1, "class", "svelte-1drnmu3");
-    			add_location(button1, file, 84, 4, 2845);
-    			attr_dev(button2, "class", "svelte-1drnmu3");
-    			add_location(button2, file, 85, 4, 2953);
-    			attr_dev(div0, "class", "btn-acceptkeep svelte-1drnmu3");
-    			add_location(div0, file, 82, 3, 2741);
-    			attr_dev(div1, "class", "acceptkeep svelte-1drnmu3");
+    			attr_dev(h1, "class", "svelte-6yyobw");
+    			add_location(h1, file, 80, 3, 2663);
+    			attr_dev(span0, "class", "svelte-6yyobw");
+    			add_location(span0, file, 81, 6, 2687);
+    			attr_dev(span1, "class", "svelte-6yyobw");
+    			add_location(span1, file, 81, 33, 2714);
+    			attr_dev(p, "class", "svelte-6yyobw");
+    			add_location(p, file, 81, 3, 2684);
+    			attr_dev(button0, "class", "svelte-6yyobw");
+    			add_location(button0, file, 83, 4, 2769);
+    			attr_dev(button1, "class", "svelte-6yyobw");
+    			add_location(button1, file, 84, 4, 2840);
+    			attr_dev(button2, "class", "svelte-6yyobw");
+    			add_location(button2, file, 85, 4, 2948);
+    			attr_dev(div0, "class", "btn-acceptkeep svelte-6yyobw");
+    			add_location(div0, file, 82, 3, 2736);
+    			attr_dev(div1, "class", "acceptkeep svelte-6yyobw");
     			set_style(div1, "background-image", "url('" + bgKept + "')");
-    			add_location(div1, file, 79, 2, 2598);
+    			add_location(div1, file, 79, 2, 2593);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -863,13 +863,13 @@ var app = (function () {
     			t2 = space();
     			button = element("button");
     			button.textContent = "Back to home";
-    			attr_dev(h1, "class", "svelte-1drnmu3");
-    			add_location(h1, file, 91, 2, 3157);
-    			attr_dev(button, "class", "svelte-1drnmu3");
-    			add_location(button, file, 95, 3, 3246);
-    			attr_dev(div, "class", "kept svelte-1drnmu3");
+    			attr_dev(h1, "class", "svelte-6yyobw");
+    			add_location(h1, file, 91, 2, 3152);
+    			attr_dev(button, "class", "svelte-6yyobw");
+    			add_location(button, file, 95, 3, 3241);
+    			attr_dev(div, "class", "kept svelte-6yyobw");
     			set_style(div, "background-image", "url('" + bgKept + "')");
-    			add_location(div, file, 90, 2, 3094);
+    			add_location(div, file, 90, 2, 3089);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -941,8 +941,8 @@ var app = (function () {
     			t0 = text("\"");
     			t1 = text(t1_value);
     			t2 = text("\"");
-    			attr_dev(p, "class", "svelte-1drnmu3");
-    			add_location(p, file, 93, 3, 3213);
+    			attr_dev(p, "class", "svelte-6yyobw");
+    			add_location(p, file, 93, 3, 3208);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1003,9 +1003,9 @@ var app = (function () {
     			if (if_block5) if_block5.c();
     			t5 = space();
     			if (if_block6) if_block6.c();
-    			attr_dev(main, "class", "svelte-1drnmu3");
+    			attr_dev(main, "class", "svelte-6yyobw");
     			add_location(main, file, 23, 0, 466);
-    			attr_dev(body, "class", "svelte-1drnmu3");
+    			attr_dev(body, "class", "svelte-6yyobw");
     			add_location(body, file, 21, 0, 457);
     		},
     		l: function claim(nodes) {

@@ -64,7 +64,7 @@
 	{#if step=='intospace'}
 		<div class="intospace" style="background-image: url('{bgSpace}')">
 			<h1>Your thoughts are flown into space</h1>
-			<button on:click={()=>step='choose'}>Add more thoughts</button>
+			<button on:click={()=>step='choose'}>Back to home</button>
 		</div>
 	{/if}
 
@@ -104,7 +104,7 @@
 
 <style>
 	@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=swap");
-	
+
 	*,
 	*::after,
 	*::before {
