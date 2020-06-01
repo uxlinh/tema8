@@ -4,25 +4,32 @@
 	let dessert 
 	let step = 'registrer'
 </script>
+
 	
 
 <main>
+
+<!-- Registrer -->
 	{#if step == 'registrer' }
+
 	<h1>Registrer deg som bruker</h1>
-	<label>Forrett</label>
-	<input placeholder="Skriv inn forrett" type="text" bind:value={forrett}> 
+	<label>Navn</label>
+	<input placeholder="Fornavn Etternavn" type="text" bind:value={forrett}> 
 	<br>
 	<span>Hovedrett</span>
-	<input placeholder="Skriv inn hovedrett" type="text" bind:value={hovedrett}>
+	<input placeholder="Skriv inn alderen din" type="text" bind:value={hovedrett}>
 	<br>
 	<span>Dessert</span>
 	<input placeholder="Skriv inn Dessert" type="text" bind:value={dessert}>
 	
 	<button on:click={ ()=> { step='kvittering' } }>Registrer</button>	
+
 	{/if}
 	
 	 
+<!-- Kvittering -->
 	{#if step == 'kvittering' }
+
 	<h4>Din bestilling:</h4>
 	<ol> 
 		<li>Forrett: {forrett}</li>
@@ -32,10 +39,13 @@
 	<button on:click={ ()=> { step='registrer' } }>Kanseller Registrering</button>	
 	<button on:click={ ()=> { step='registrer' } }>Tilbake</button>	
 	<button on:click={ ()=> { step='bekreftet' } }>Bekreft</button>	
+
 	{/if}
 	
+
+<!-- Registrering bekreftet -->
 	{#if step == 'bekreftet' }
-	<h4>Bekreftet</h4>
+	<h4>Registrering bekreftet</h4>
 	{/if}
 </main>
 
