@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Vanilla form template</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div id='circle' class="circle"></div>
+    </main>
+
+    <!-- Alarm siden er utenfor main har absolute positioning -->
+
+    <div id="alarm">
+        <input id="hours" type="number" name="hours"  placeholder="hours">
+        <input id="minutes" type="numbers" name="minutes"  placeholder="minutes">
+        <button id="setAlarm">Set alarm</button>
+    </div>
+    <button id="showAlarm">Alarm</button>
+
+    <script type='module' src="script.js"></script>
+</body>
+</html>
