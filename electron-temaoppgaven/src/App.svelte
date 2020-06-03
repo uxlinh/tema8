@@ -1,4 +1,5 @@
 <script>
+	import {fade, fly, scale} from 'svelte/transition';
 	//steps: choose | writeletgo | writekeep | acceptletgo | acceptkeep | random | intospace
 	let step = 'choose'
 	let keepthought
@@ -15,6 +16,8 @@
 	const bgAccept = './assets/acceptletgo.png'
 	const bgSpace = './assets/space.jpg'
 	const bgKept = './assets/kept.png'
+
+	let showFav
 </script>
 
 
@@ -31,12 +34,16 @@
 			<button class="btn-start" on:click={()=>step='writeletgo'}>Let go</button>
 			<img class="img-letgo" src="./assets/dandelion.png" alt="Let Go Picture">
 		</div>
-		<div class="keep">
-			<h1 class="h1-start">Got some positive thoughts you want to keep?</h1>
-			<button class="btn-start" on:click={()=>step='writekeep'}>Keep</button>
-			<button class="btn-start" on:click={()=>step='kept'}>Kept</button>
-			<img class="img-keep" src="./assets/keep.png" alt="Keep Picture">
-		</div>
+		{#if !showFav} 
+			<div class="keep">
+				<h1 class="h1-start">Got some positive thoughts you want to keep?</h1>
+				<button class="btn-start" on:click={()=>step='writekeep'}>Keep</button>
+			{#if thoughts.length > 0}
+				<button class="btn-start" in:fade on:click={()=>step='kept'}>Kept</button>
+			{/if}
+				<img class="img-keep" src="./assets/keep.png" alt="Keep Picture">
+			</div>
+		{/if}
 	</div>
 	{/if}
 
@@ -69,8 +76,8 @@
 		</div>
 	{/if}
 	{#if step=='intospace'}
-	<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
-	<div class="back" on:click={()=> { step='choose'; letgothought = '' } }><img src="./assets/back.svg" alt="Arrow Back"></div>
+		<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
+		<div class="back" on:click={()=> { step='choose'; letgothought = '' } }><img src="./assets/back.svg" alt="Arrow Back"></div>
 		<div class="intospace" style="background-image: url('{bgSpace}')">
 			<h1>Your thoughts are flown into space</h1>
 			<button on:click={()=>step='choose'}>Back to home</button>
