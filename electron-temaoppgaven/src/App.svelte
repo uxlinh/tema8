@@ -1,6 +1,7 @@
 <script>
 	import {fade, fly, scale} from 'svelte/transition'; 
 	import { CloseSquareOutlineIcon } from 'svelte-eva-icons'
+	import { ChevronLeftIcon } from 'svelte-eva-icons'
 	//steps: choose | writeletgo | writekeep | acceptletgo | acceptkeep | random | intospace
 	let step = 'choose'
 	let letgothought
@@ -55,18 +56,17 @@
 
 <!-- Let go -->
 	{#if step=='writeletgo'}
-		<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
-		<div class="back" on:click={()=> { step='choose'; letgothought = '' } }><img src="./assets/back.svg" alt="Arrow Back"></div>
+		<!-- <div class="logo"><img src="./assets/logo.svg" alt="Logo"></div> -->
 		<div class="writeletgo">
+			<div class="back" on:click={()=> { step='choose'; letgothought = '' } }><ChevronLeftIcon/></div>
 			<h1 class="h1-write">Recognize your thoughts and write them down</h1>
 			<textarea cols="45" rows="10" bind:value={letgothought} placeholder="Write down your thoughts..."/>
-			<button on:click={()=>step='acceptletgo'}>I have recognised my thoughts</button>
+			<button class="btn-accept" on:click={()=>step='acceptletgo'}>I have recognised my thoughts</button>
 		</div>
 	{/if}
 	{#if step=='acceptletgo'}
-		<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
-		<div class="back" on:click={()=> { step='writeletgo'; letgothought = '' } }><img src="./assets/back.svg" alt="Arrow Back"></div>
 		<div class="acceptletgo" style="background-image: url('{bgAccept}')">
+				<div class="back" on:click={()=> { step='writeletgo'} }><ChevronLeftIcon/></div>
 				<div class="acceptGuidance">
 					<p class="acceptText" in:fade><q id="b">{letgothought}</q></p>
 				</div>
@@ -82,11 +82,7 @@
 		</div>
 	{/if}
 	{#if step=='intospace'}
-		<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
-
-		<div class="back" on:click={()=> { step='choose'; letgothought = '' } }><img src="./assets/back.svg" alt="Arrow Back"></div>
-
-	
+			<div class="back" on:click={()=> { step='choose'; letgothought = '' } }><ChevronLeftIcon/></div>
 			<div class="intospace" style="background-image: url('{bgSpace}')">
 				<h1>Your thoughts are flown into space</h1>
 				<button on:click={()=> step='choose'}>Back to home</button>
@@ -102,8 +98,7 @@
 
 <!-- Keep -->
 	{#if step=='writekeep'}
-		<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
-		<div class="back" on:click={()=> { step='choose'; keepthought = ''} }><img src="./assets/back.svg" alt="Arrow Back"></div>
+		<div class="back" on:click={()=> { step='choose'; keepthought = '' } }><ChevronLeftIcon/></div>
 		<div class="writekeep">		
 			<h1 class="h1-write">Write a positive thought or feedback you have received. For example: “What would your friends say about you?”</h1>
 			<textarea cols="45" rows="10" bind:value={keepthought} />
@@ -112,8 +107,7 @@
 	{/if}
 
 	{#if step=='acceptkeep'}
-		<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
-		<div class="back" on:click={()=> { step='writekeep'} }><img src="./assets/back.svg" alt="Arrow Back"></div>
+		<div class="back" on:click={()=> { step='writekeep' } }><ChevronLeftIcon/></div>
 		<div class="acceptkeep">
 			<div class="acceptGuidance">
 					<p class="acceptText"><q id="b">{keepthought}</q></p>
@@ -128,17 +122,17 @@
 	{/if}
 
 	{#if step=='kept'}
-		<div class="back" on:click={()=> { step='acceptkeep'} }><img src="./assets/back.svg" alt="Arrow Back"></div>
+		<div class="back" on:click={()=> { step='acceptkeep' } }><ChevronLeftIcon/></div>
 		<div class="kept" style="background-image: url('{bgKept}')">
 			<h1>Kept thoughts</h1>
 			{#each thoughts as thought, index}
 				<div class="keptThoughts">
 					<div class="keptThoughts-item1">
 						<p class="keptThoughts-text" in:fade out:fade> <q id="b">{thought} </q> </p>
-						<div class="close" out:fade hover:red on:click={() => removeThought(index)}><CloseSquareOutlineIcon/> </div>	
+						<div class="close" out:fade hover:red on:click={() => removeThought(index)}>
+							<CloseSquareOutlineIcon/>
+						</div>	
 					</div>
-					<!-- <div class="keptThoughts-item2">
-					</div> -->
 				</div>	
 			{/each} 
 			<button on:click={ ()=> { step='choose' } }>Back to home</button>	
@@ -181,6 +175,7 @@
 		justify-content: center;
 	}
 	.close {
+		height: 2rem;
 		max-width: 2rem;
 		fill: rgba(245, 245, 245, 0.801);
 	}
@@ -188,12 +183,18 @@
 		fill: white;
 	}
 	.back {
-		width: 11rem;
-		height: 2rem;
+		height: 3rem;
+		width: 3rem;
 		position: absolute;
+		display: flex;
+		align-items: center;
 		top: 1.8rem;
 		left: 1rem;
 		z-index: 1;
+		fill: rgba(245, 245, 245, 0.801);
+	}
+	.back:hover{
+		fill: white;
 	}
 	img {
 		width: 18%;
@@ -273,21 +274,22 @@
 	}
 	button {
 		margin-top: 1rem;
-		background-color: rgba(245, 245, 245, 0.836)
+		background-color: rgba(245, 245, 245, 0.836);
 	}
 	button:hover{
 		background-color: white;
+		cursor: pointer;
 	}
 	.btn-start {
 		z-index: 1;
 		position: relative;
 		top: 6.6rem;
 	}
+
 	div{
 		width:100%;
 		height:100%;
 	}
-
 	h1 {
 		font-family: poppins;
 		font-weight: 200;
