@@ -340,7 +340,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (25:1) {#if step=='choose'}
+    // (26:1) {#if step=='choose'}
     function create_if_block_6(ctx) {
     	let div0;
     	let img0;
@@ -394,34 +394,34 @@ var app = (function () {
     			img2 = element("img");
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-qyy28h");
-    			add_location(img0, file, 25, 19, 514);
-    			attr_dev(div0, "class", "logo svelte-qyy28h");
-    			add_location(div0, file, 25, 1, 496);
-    			attr_dev(h10, "class", "h1-start svelte-qyy28h");
-    			add_location(h10, file, 28, 3, 617);
-    			attr_dev(button0, "class", "btn-start svelte-qyy28h");
-    			add_location(button0, file, 29, 3, 694);
-    			attr_dev(img1, "class", "img-letgo svelte-qyy28h");
+    			attr_dev(img0, "class", "svelte-173xkbd");
+    			add_location(img0, file, 26, 19, 514);
+    			attr_dev(div0, "class", "logo svelte-173xkbd");
+    			add_location(div0, file, 26, 1, 496);
+    			attr_dev(h10, "class", "h1-start svelte-173xkbd");
+    			add_location(h10, file, 29, 3, 617);
+    			attr_dev(button0, "class", "btn-start svelte-173xkbd");
+    			add_location(button0, file, 30, 3, 694);
+    			attr_dev(img1, "class", "img-letgo svelte-173xkbd");
     			if (img1.src !== (img1_src_value = "./assets/dandelion.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Let Go Picture");
-    			add_location(img1, file, 30, 3, 772);
-    			attr_dev(div1, "class", "letgo svelte-qyy28h");
-    			add_location(div1, file, 27, 2, 594);
-    			attr_dev(h11, "class", "h1-start svelte-qyy28h");
-    			add_location(h11, file, 33, 3, 879);
-    			attr_dev(button1, "class", "btn-start svelte-qyy28h");
-    			add_location(button1, file, 34, 3, 953);
-    			attr_dev(button2, "class", "btn-start svelte-qyy28h");
-    			add_location(button2, file, 35, 3, 1028);
-    			attr_dev(img2, "class", "img-keep svelte-qyy28h");
+    			add_location(img1, file, 31, 3, 772);
+    			attr_dev(div1, "class", "letgo svelte-173xkbd");
+    			add_location(div1, file, 28, 2, 594);
+    			attr_dev(h11, "class", "h1-start svelte-173xkbd");
+    			add_location(h11, file, 34, 3, 879);
+    			attr_dev(button1, "class", "btn-start svelte-173xkbd");
+    			add_location(button1, file, 35, 3, 953);
+    			attr_dev(button2, "class", "btn-start svelte-173xkbd");
+    			add_location(button2, file, 36, 3, 1028);
+    			attr_dev(img2, "class", "img-keep svelte-173xkbd");
     			if (img2.src !== (img2_src_value = "./assets/keep.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "alt", "Keep Picture");
-    			add_location(img2, file, 36, 3, 1098);
-    			attr_dev(div2, "class", "keep svelte-qyy28h");
-    			add_location(div2, file, 32, 2, 857);
-    			attr_dev(div3, "class", "choose svelte-qyy28h");
-    			add_location(div3, file, 26, 1, 571);
+    			add_location(img2, file, 37, 3, 1098);
+    			attr_dev(div2, "class", "keep svelte-173xkbd");
+    			add_location(div2, file, 33, 2, 857);
+    			attr_dev(div3, "class", "choose svelte-173xkbd");
+    			add_location(div3, file, 27, 1, 571);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -463,14 +463,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(25:1) {#if step=='choose'}",
+    		source: "(26:1) {#if step=='choose'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (43:1) {#if step=='writeletgo'}
+    // (44:1) {#if step=='writeletgo'}
     function create_if_block_5(ctx) {
     	let div0;
     	let img0;
@@ -506,27 +506,27 @@ var app = (function () {
     			button.textContent = "I have recognised my thoughts";
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-qyy28h");
-    			add_location(img0, file, 43, 20, 1251);
-    			attr_dev(div0, "class", "logo svelte-qyy28h");
-    			add_location(div0, file, 43, 2, 1233);
+    			attr_dev(img0, "class", "svelte-173xkbd");
+    			add_location(img0, file, 44, 20, 1251);
+    			attr_dev(div0, "class", "logo svelte-173xkbd");
+    			add_location(div0, file, 44, 2, 1233);
     			if (img1.src !== (img1_src_value = "./assets/back.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Arrow Back");
-    			attr_dev(img1, "class", "svelte-qyy28h");
-    			add_location(img1, file, 44, 74, 1380);
-    			attr_dev(div1, "class", "back svelte-qyy28h");
-    			add_location(div1, file, 44, 2, 1308);
-    			attr_dev(h1, "class", "h1-write svelte-qyy28h");
-    			add_location(h1, file, 46, 3, 1463);
+    			attr_dev(img1, "class", "svelte-173xkbd");
+    			add_location(img1, file, 45, 74, 1380);
+    			attr_dev(div1, "class", "back svelte-173xkbd");
+    			add_location(div1, file, 45, 2, 1308);
+    			attr_dev(h1, "class", "h1-write svelte-173xkbd");
+    			add_location(h1, file, 47, 3, 1463);
     			attr_dev(textarea, "cols", "45");
     			attr_dev(textarea, "rows", "10");
     			attr_dev(textarea, "placeholder", "Write down your thoughts...");
-    			attr_dev(textarea, "class", "svelte-qyy28h");
-    			add_location(textarea, file, 47, 3, 1536);
-    			attr_dev(button, "class", "svelte-qyy28h");
-    			add_location(button, file, 48, 3, 1639);
-    			attr_dev(div2, "class", "writeletgo svelte-qyy28h");
-    			add_location(div2, file, 45, 2, 1435);
+    			attr_dev(textarea, "class", "svelte-173xkbd");
+    			add_location(textarea, file, 48, 3, 1536);
+    			attr_dev(button, "class", "svelte-173xkbd");
+    			add_location(button, file, 49, 3, 1639);
+    			attr_dev(div2, "class", "writeletgo svelte-173xkbd");
+    			add_location(div2, file, 46, 2, 1435);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -568,14 +568,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(43:1) {#if step=='writeletgo'}",
+    		source: "(44:1) {#if step=='writeletgo'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (52:1) {#if step=='acceptletgo'}
+    // (53:1) {#if step=='acceptletgo'}
     function create_if_block_4(ctx) {
     	let div0;
     	let img0;
@@ -634,38 +634,38 @@ var app = (function () {
     			button.textContent = "Accept & Let go";
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-qyy28h");
-    			add_location(img0, file, 52, 20, 1783);
-    			attr_dev(div0, "class", "logo svelte-qyy28h");
-    			add_location(div0, file, 52, 2, 1765);
+    			attr_dev(img0, "class", "svelte-173xkbd");
+    			add_location(img0, file, 53, 20, 1783);
+    			attr_dev(div0, "class", "logo svelte-173xkbd");
+    			add_location(div0, file, 53, 2, 1765);
     			if (img1.src !== (img1_src_value = "./assets/back.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Arrow Back");
-    			attr_dev(img1, "class", "svelte-qyy28h");
-    			add_location(img1, file, 53, 78, 1916);
-    			attr_dev(div1, "class", "back svelte-qyy28h");
-    			add_location(div1, file, 53, 2, 1840);
+    			attr_dev(img1, "class", "svelte-173xkbd");
+    			add_location(img1, file, 54, 78, 1916);
+    			attr_dev(div1, "class", "back svelte-173xkbd");
+    			add_location(div1, file, 54, 2, 1840);
     			attr_dev(q, "id", "b");
-    			attr_dev(q, "class", "svelte-qyy28h");
-    			add_location(q, file, 56, 27, 2101);
-    			attr_dev(p0, "class", "acceptText svelte-qyy28h");
-    			add_location(p0, file, 56, 5, 2079);
-    			attr_dev(div2, "class", "acceptGuidance svelte-qyy28h");
-    			add_location(div2, file, 55, 4, 2045);
-    			attr_dev(h1, "class", "h1-write svelte-qyy28h");
-    			add_location(h1, file, 59, 5, 2183);
-    			attr_dev(p1, "class", "svelte-qyy28h");
-    			add_location(p1, file, 60, 5, 2230);
-    			attr_dev(p2, "class", "svelte-qyy28h");
-    			add_location(p2, file, 61, 5, 2285);
-    			attr_dev(p3, "class", "svelte-qyy28h");
-    			add_location(p3, file, 63, 5, 2393);
-    			attr_dev(button, "class", "svelte-qyy28h");
-    			add_location(button, file, 65, 5, 2434);
-    			attr_dev(div3, "class", "acceptGuidance svelte-qyy28h");
-    			add_location(div3, file, 58, 4, 2149);
-    			attr_dev(div4, "class", "acceptletgo svelte-qyy28h");
+    			attr_dev(q, "class", "svelte-173xkbd");
+    			add_location(q, file, 57, 27, 2101);
+    			attr_dev(p0, "class", "acceptText svelte-173xkbd");
+    			add_location(p0, file, 57, 5, 2079);
+    			attr_dev(div2, "class", "acceptGuidance svelte-173xkbd");
+    			add_location(div2, file, 56, 4, 2045);
+    			attr_dev(h1, "class", "h1-write svelte-173xkbd");
+    			add_location(h1, file, 60, 5, 2183);
+    			attr_dev(p1, "class", "svelte-173xkbd");
+    			add_location(p1, file, 61, 5, 2230);
+    			attr_dev(p2, "class", "svelte-173xkbd");
+    			add_location(p2, file, 62, 5, 2285);
+    			attr_dev(p3, "class", "svelte-173xkbd");
+    			add_location(p3, file, 64, 5, 2393);
+    			attr_dev(button, "class", "svelte-173xkbd");
+    			add_location(button, file, 66, 5, 2434);
+    			attr_dev(div3, "class", "acceptGuidance svelte-173xkbd");
+    			add_location(div3, file, 59, 4, 2149);
+    			attr_dev(div4, "class", "acceptletgo svelte-173xkbd");
     			set_style(div4, "background-image", "url('" + bgAccept + "')");
-    			add_location(div4, file, 54, 2, 1971);
+    			add_location(div4, file, 55, 2, 1971);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -713,14 +713,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(52:1) {#if step=='acceptletgo'}",
+    		source: "(53:1) {#if step=='acceptletgo'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (70:1) {#if step=='intospace'}
+    // (71:1) {#if step=='intospace'}
     function create_if_block_3(ctx) {
     	let div0;
     	let img0;
@@ -752,23 +752,23 @@ var app = (function () {
     			button.textContent = "Back to home";
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-qyy28h");
-    			add_location(img0, file, 70, 19, 2595);
-    			attr_dev(div0, "class", "logo svelte-qyy28h");
-    			add_location(div0, file, 70, 1, 2577);
+    			attr_dev(img0, "class", "svelte-173xkbd");
+    			add_location(img0, file, 71, 19, 2595);
+    			attr_dev(div0, "class", "logo svelte-173xkbd");
+    			add_location(div0, file, 71, 1, 2577);
     			if (img1.src !== (img1_src_value = "./assets/back.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Arrow Back");
-    			attr_dev(img1, "class", "svelte-qyy28h");
-    			add_location(img1, file, 71, 73, 2723);
-    			attr_dev(div1, "class", "back svelte-qyy28h");
-    			add_location(div1, file, 71, 1, 2651);
-    			attr_dev(h1, "class", "svelte-qyy28h");
-    			add_location(h1, file, 73, 3, 2848);
-    			attr_dev(button, "class", "svelte-qyy28h");
-    			add_location(button, file, 74, 3, 2895);
-    			attr_dev(div2, "class", "intospace svelte-qyy28h");
+    			attr_dev(img1, "class", "svelte-173xkbd");
+    			add_location(img1, file, 72, 73, 2723);
+    			attr_dev(div1, "class", "back svelte-173xkbd");
+    			add_location(div1, file, 72, 1, 2651);
+    			attr_dev(h1, "class", "svelte-173xkbd");
+    			add_location(h1, file, 74, 3, 2848);
+    			attr_dev(button, "class", "svelte-173xkbd");
+    			add_location(button, file, 75, 3, 2895);
+    			attr_dev(div2, "class", "intospace svelte-173xkbd");
     			set_style(div2, "background-image", "url('" + bgSpace + "')");
-    			add_location(div2, file, 72, 2, 2778);
+    			add_location(div2, file, 73, 2, 2778);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -802,14 +802,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(70:1) {#if step=='intospace'}",
+    		source: "(71:1) {#if step=='intospace'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (80:1) {#if step=='writekeep'}
+    // (81:1) {#if step=='writekeep'}
     function create_if_block_2(ctx) {
     	let div0;
     	let img0;
@@ -845,26 +845,26 @@ var app = (function () {
     			button.textContent = "Keep thoughts";
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-qyy28h");
-    			add_location(img0, file, 80, 20, 3030);
-    			attr_dev(div0, "class", "logo svelte-qyy28h");
-    			add_location(div0, file, 80, 2, 3012);
+    			attr_dev(img0, "class", "svelte-173xkbd");
+    			add_location(img0, file, 81, 20, 3030);
+    			attr_dev(div0, "class", "logo svelte-173xkbd");
+    			add_location(div0, file, 81, 2, 3012);
     			if (img1.src !== (img1_src_value = "./assets/back.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Arrow Back");
-    			attr_dev(img1, "class", "svelte-qyy28h");
-    			add_location(img1, file, 81, 72, 3157);
-    			attr_dev(div1, "class", "back svelte-qyy28h");
-    			add_location(div1, file, 81, 2, 3087);
-    			attr_dev(h1, "class", "h1-write svelte-qyy28h");
-    			add_location(h1, file, 83, 3, 3241);
+    			attr_dev(img1, "class", "svelte-173xkbd");
+    			add_location(img1, file, 82, 72, 3157);
+    			attr_dev(div1, "class", "back svelte-173xkbd");
+    			add_location(div1, file, 82, 2, 3087);
+    			attr_dev(h1, "class", "h1-write svelte-173xkbd");
+    			add_location(h1, file, 84, 3, 3241);
     			attr_dev(textarea, "cols", "45");
     			attr_dev(textarea, "rows", "10");
-    			attr_dev(textarea, "class", "svelte-qyy28h");
-    			add_location(textarea, file, 84, 3, 3380);
-    			attr_dev(button, "class", "svelte-qyy28h");
-    			add_location(button, file, 85, 3, 3441);
-    			attr_dev(div2, "class", "writekeep svelte-qyy28h");
-    			add_location(div2, file, 82, 2, 3212);
+    			attr_dev(textarea, "class", "svelte-173xkbd");
+    			add_location(textarea, file, 85, 3, 3380);
+    			attr_dev(button, "class", "svelte-173xkbd");
+    			add_location(button, file, 86, 3, 3441);
+    			attr_dev(div2, "class", "writekeep svelte-173xkbd");
+    			add_location(div2, file, 83, 2, 3212);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -906,14 +906,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(80:1) {#if step=='writekeep'}",
+    		source: "(81:1) {#if step=='writekeep'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (90:1) {#if step=='acceptkeep'}
+    // (91:1) {#if step=='acceptkeep'}
     function create_if_block_1(ctx) {
     	let div0;
     	let img0;
@@ -967,35 +967,35 @@ var app = (function () {
     			button1.textContent = "See kept thoughts";
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-qyy28h");
-    			add_location(img0, file, 90, 20, 3615);
-    			attr_dev(div0, "class", "logo svelte-qyy28h");
-    			add_location(div0, file, 90, 2, 3597);
+    			attr_dev(img0, "class", "svelte-173xkbd");
+    			add_location(img0, file, 91, 20, 3615);
+    			attr_dev(div0, "class", "logo svelte-173xkbd");
+    			add_location(div0, file, 91, 2, 3597);
     			if (img1.src !== (img1_src_value = "./assets/back.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Arrow Back");
-    			attr_dev(img1, "class", "svelte-qyy28h");
-    			add_location(img1, file, 91, 57, 3727);
-    			attr_dev(div1, "class", "back svelte-qyy28h");
-    			add_location(div1, file, 91, 2, 3672);
+    			attr_dev(img1, "class", "svelte-173xkbd");
+    			add_location(img1, file, 92, 57, 3727);
+    			attr_dev(div1, "class", "back svelte-173xkbd");
+    			add_location(div1, file, 92, 2, 3672);
     			attr_dev(q, "id", "b");
-    			attr_dev(q, "class", "svelte-qyy28h");
-    			add_location(q, file, 94, 27, 3866);
-    			attr_dev(p0, "class", "acceptText svelte-qyy28h");
-    			add_location(p0, file, 94, 5, 3844);
-    			attr_dev(div2, "class", "acceptGuidance svelte-qyy28h");
-    			add_location(div2, file, 93, 3, 3810);
-    			attr_dev(h1, "class", "h1-write svelte-qyy28h");
-    			add_location(h1, file, 97, 5, 3945);
-    			attr_dev(p1, "class", "svelte-qyy28h");
-    			add_location(p1, file, 98, 5, 3985);
-    			attr_dev(button0, "class", "svelte-qyy28h");
-    			add_location(button0, file, 99, 5, 4115);
-    			attr_dev(button1, "class", "svelte-qyy28h");
-    			add_location(button1, file, 100, 6, 4225);
-    			attr_dev(div3, "class", "acceptGuidance svelte-qyy28h");
-    			add_location(div3, file, 96, 3, 3911);
-    			attr_dev(div4, "class", "acceptkeep svelte-qyy28h");
-    			add_location(div4, file, 92, 2, 3782);
+    			attr_dev(q, "class", "svelte-173xkbd");
+    			add_location(q, file, 95, 27, 3866);
+    			attr_dev(p0, "class", "acceptText svelte-173xkbd");
+    			add_location(p0, file, 95, 5, 3844);
+    			attr_dev(div2, "class", "acceptGuidance svelte-173xkbd");
+    			add_location(div2, file, 94, 3, 3810);
+    			attr_dev(h1, "class", "h1-write svelte-173xkbd");
+    			add_location(h1, file, 98, 5, 3945);
+    			attr_dev(p1, "class", "svelte-173xkbd");
+    			add_location(p1, file, 99, 5, 3985);
+    			attr_dev(button0, "class", "svelte-173xkbd");
+    			add_location(button0, file, 100, 5, 4115);
+    			attr_dev(button1, "class", "svelte-173xkbd");
+    			add_location(button1, file, 101, 6, 4225);
+    			attr_dev(div3, "class", "acceptGuidance svelte-173xkbd");
+    			add_location(div3, file, 97, 3, 3911);
+    			attr_dev(div4, "class", "acceptkeep svelte-173xkbd");
+    			add_location(div4, file, 93, 2, 3782);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1042,14 +1042,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(90:1) {#if step=='acceptkeep'}",
+    		source: "(91:1) {#if step=='acceptkeep'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (106:1) {#if step=='kept'}
+    // (107:1) {#if step=='kept'}
     function create_if_block(ctx) {
     	let div0;
     	let img0;
@@ -1095,23 +1095,23 @@ var app = (function () {
     			button.textContent = "Back to home";
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-qyy28h");
-    			add_location(img0, file, 106, 19, 4379);
-    			attr_dev(div0, "class", "logo svelte-qyy28h");
-    			add_location(div0, file, 106, 1, 4361);
+    			attr_dev(img0, "class", "svelte-173xkbd");
+    			add_location(img0, file, 107, 19, 4379);
+    			attr_dev(div0, "class", "logo svelte-173xkbd");
+    			add_location(div0, file, 107, 1, 4361);
     			if (img1.src !== (img1_src_value = "./assets/back.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Arrow Back");
-    			attr_dev(img1, "class", "svelte-qyy28h");
-    			add_location(img1, file, 107, 57, 4491);
-    			attr_dev(div1, "class", "back svelte-qyy28h");
-    			add_location(div1, file, 107, 1, 4435);
-    			attr_dev(h1, "class", "svelte-qyy28h");
-    			add_location(h1, file, 109, 2, 4609);
-    			attr_dev(button, "class", "svelte-qyy28h");
-    			add_location(button, file, 113, 3, 4729);
-    			attr_dev(div2, "class", "kept svelte-qyy28h");
+    			attr_dev(img1, "class", "svelte-173xkbd");
+    			add_location(img1, file, 108, 57, 4491);
+    			attr_dev(div1, "class", "back svelte-173xkbd");
+    			add_location(div1, file, 108, 1, 4435);
+    			attr_dev(h1, "class", "svelte-173xkbd");
+    			add_location(h1, file, 110, 2, 4609);
+    			attr_dev(button, "class", "svelte-173xkbd");
+    			add_location(button, file, 114, 3, 4729);
+    			attr_dev(div2, "class", "kept svelte-173xkbd");
     			set_style(div2, "background-image", "url('" + bgKept + "')");
-    			add_location(div2, file, 108, 2, 4546);
+    			add_location(div2, file, 109, 2, 4546);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1176,14 +1176,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(106:1) {#if step=='kept'}",
+    		source: "(107:1) {#if step=='kept'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (111:2) {#each thoughts as thought}
+    // (112:2) {#each thoughts as thought}
     function create_each_block(ctx) {
     	let p;
     	let q;
@@ -1196,10 +1196,10 @@ var app = (function () {
     			q = element("q");
     			t = text(t_value);
     			attr_dev(q, "id", "b");
-    			attr_dev(q, "class", "svelte-qyy28h");
-    			add_location(q, file, 111, 25, 4687);
-    			attr_dev(p, "class", "acceptText svelte-qyy28h");
-    			add_location(p, file, 111, 3, 4665);
+    			attr_dev(q, "class", "svelte-173xkbd");
+    			add_location(q, file, 112, 25, 4687);
+    			attr_dev(p, "class", "acceptText svelte-173xkbd");
+    			add_location(p, file, 112, 3, 4665);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -1218,7 +1218,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(111:2) {#each thoughts as thought}",
+    		source: "(112:2) {#each thoughts as thought}",
     		ctx
     	});
 
@@ -1259,10 +1259,10 @@ var app = (function () {
     			if (if_block5) if_block5.c();
     			t5 = space();
     			if (if_block6) if_block6.c();
-    			attr_dev(main, "class", "svelte-qyy28h");
-    			add_location(main, file, 23, 0, 466);
-    			attr_dev(body, "class", "svelte-qyy28h");
-    			add_location(body, file, 21, 0, 457);
+    			attr_dev(main, "class", "svelte-173xkbd");
+    			add_location(main, file, 24, 0, 466);
+    			attr_dev(body, "class", "svelte-173xkbd");
+    			add_location(body, file, 23, 0, 459);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
