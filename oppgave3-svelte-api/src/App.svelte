@@ -1,30 +1,38 @@
 <script>
-	export let name;
+    let q 
+    const limit = 1
+    let apiKey = 'LHapcAM6q9szwBHIjLL8yUQtcTFSHleE'
+
+    let gif
+
+const getImage = () => {
+    fetch(`https://api.giphy.com/v1/gifs/search?q=${q}&limit=${limit}&apiKey=${apiKey}`) 
+    .then( res => res.json() )
+    .then( json => {
+        gif = json.data[0].images.downsized_medium.url
+        console.log(json)
+        })
+}
+    
 </script>
 
 <main>
-	<h1>Hello0000!! {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+    {#if getImage}
+        <h1>Finn din favoritt GIF</h1>
+        <input bind:value={q} type="text" name="search" id="search">
+        <button on:click={getImage}>Hent bilde</button>
+        <img src="{gif}" alt="{q}">    
+    {:else}
+        <h2>Fetching image</h2>
+    {/if}
+
+    
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+    main{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
 </style>

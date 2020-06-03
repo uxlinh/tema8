@@ -19,11 +19,13 @@
 
 
 
+
+
 <body>
-	
 <main>
 	{#if step=='choose'}
-	<div class="choose">	
+	<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>	
+	<div class="choose">
 		<div class="letgo">
 			<h1 class="h1-start">Got some intrusive thoughts you want to let go?</h1>
 			<button class="btn-start" on:click={()=>step='writeletgo'}>Let go</button>
@@ -32,6 +34,7 @@
 		<div class="keep">
 			<h1 class="h1-start">Got some positive thoughts you want to keep?</h1>
 			<button class="btn-start" on:click={()=>step='writekeep'}>Keep</button>
+			<button class="btn-start" on:click={()=>step='kept'}>Kept</button>
 			<img class="img-keep" src="./assets/keep.png" alt="Keep Picture">
 		</div>
 	</div>
@@ -39,19 +42,23 @@
 
 <!-- Let go -->
 	{#if step=='writeletgo'}
+		<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
+		<div class="back" on:click={()=> { step='choose'; letgothought = '' } }><img src="./assets/back.svg" alt="Arrow Back"></div>
 		<div class="writeletgo">
-			<h1>Recognize your thoughts and write them down</h1>
-			<textarea cols="45" rows="15" bind:value={letgothought} placeholder="Write down your thoughts..."/>
+			<h1 class="h1-write">Recognize your thoughts and write them down</h1>
+			<textarea cols="45" rows="10" bind:value={letgothought} placeholder="Write down your thoughts..."/>
 			<button on:click={()=>step='acceptletgo'}>I have recognised my thoughts</button>
 		</div>
 	{/if}
 	{#if step=='acceptletgo'}
+		<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
+		<div class="back" on:click={()=> { step='writeletgo'; letgothought = '' } }><img src="./assets/back.svg" alt="Arrow Back"></div>
 		<div class="acceptletgo" style="background-image: url('{bgAccept}')">
 				<div class="acceptGuidance">
 					<p class="acceptText"><q id="b">{letgothought}</q></p>
 				</div>
 				<div class="acceptGuidance">
-					<h1>Accept & Let go</h1>
+					<h1 class="h1-write">Accept & Let go</h1>
 					<p>Accept the thoughts and feelings you have.</p>
 					<p>Do not give the thoughts too much room, just enough attention and accept that they exist.
 					</p>
@@ -62,6 +69,8 @@
 		</div>
 	{/if}
 	{#if step=='intospace'}
+	<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
+	<div class="back" on:click={()=> { step='choose'; letgothought = '' } }><img src="./assets/back.svg" alt="Arrow Back"></div>
 		<div class="intospace" style="background-image: url('{bgSpace}')">
 			<h1>Your thoughts are flown into space</h1>
 			<button on:click={()=>step='choose'}>Back to home</button>
@@ -70,28 +79,38 @@
 
 <!-- Keep -->
 	{#if step=='writekeep'}
+		<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
+		<div class="back" on:click={()=> { step='choose'; keepthought = ''} }><img src="./assets/back.svg" alt="Arrow Back"></div>
 		<div class="writekeep">		
-			<h1>Write a positive thought or feedback you have received. For example: “What would your friends say about you?”</h1>
-			<textarea cols="45" rows="15" bind:value={keepthought} />
+			<h1 class="h1-write">Write a positive thought or feedback you have received. For example: “What would your friends say about you?”</h1>
+			<textarea cols="45" rows="10" bind:value={keepthought} />
 			<button on:click={ () => { step='acceptkeep'; thoughts = [keepthought, ...thoughts]; }}>Keep thoughts</button>
 		</div>
 	{/if}
+
 	{#if step=='acceptkeep'}
-		<div class="acceptkeep" style="background-image: url('{bgKept}')">
-			<h1>Kept it!</h1>
-			<p><span>"</span>{keepthought}<span>"</span></p>
-			<div class="btn-acceptkeep">
-				<button on:click={ ()=> { step='choose' } }>Back to home</button>	
-				<button on:click={ ()=> { keepthought = ''; step='writekeep' } }>Keep more positive thoughts</button>		
-				<button on:click={ ()=> { step='kept'; keepthought = ''} }>See your kept thoughts</button>
-			</div>		
+		<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
+		<div class="back" on:click={()=> { step='writekeep'} }><img src="./assets/back.svg" alt="Arrow Back"></div>
+		<div class="acceptkeep">
+			<div class="acceptGuidance">
+					<p class="acceptText"><q id="b">{keepthought}</q></p>
+			</div>
+			<div class="acceptGuidance">
+					<h1 class="h1-write">Kept it!</h1>
+					<p>Your positive thoughts/feedback are kept for future review. They can provide you warm feelings for good and bad days.</p>
+					<button on:click={ ()=> { keepthought = ''; step='writekeep' } }>Keep more positive thoughts</button>		
+						<button on:click={ ()=> { step='kept'; keepthought = ''} }>See kept thoughts</button>		
+			</div>
 		</div>
 	{/if}
+
 	{#if step=='kept'}
+	<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
+	<div class="back" on:click={()=> { step='acceptkeep'} }><img src="./assets/back.svg" alt="Arrow Back"></div>
 		<div class="kept" style="background-image: url('{bgKept}')">
 		<h1>Kept thoughts</h1>
 		{#each thoughts as thought}
-			<p>"{thought}"</p>	
+			<p class="acceptText"><q id="b">{thought}</q></p>	
 		{/each}
 			<button on:click={ ()=> { step='choose' } }>Back to home</button>	
 		</div>
@@ -103,15 +122,12 @@
 
 
 <style>
-	@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700&display=swap");
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
 
 	*,
 	*::after,
-	*::before {
- 	margin: 0;
-  	padding: 0;
-	}
-
+	*::before,
 	:global(body) {
 		margin: 0;
 		padding: 0;
@@ -124,20 +140,42 @@
 		place-items:center;
 		margin: 0;
   		padding: 0;
+		font-family: poppins;
+	}
+	.logo {
+		position: absolute;
+		display: flex;
+		width: 100vw;
+		height: 15vh;
+		top: 0rem;
+		align-items: center;
+		justify-content: center;
+	}
+	.back {
+		width: 11rem;
+		height: 2rem;
+		position: absolute;
+		top: 1.8rem;
+		left: 1rem;
+		z-index: 1;
+	}
+	img {
+		width: 18%;
 	}
 	.choose{
 		display:grid;
 		grid-template-columns: 1fr 1fr;
 		text-align: center;
 	}
-	.writeletgo, .acceptGuidance {
+	.writeletgo, .acceptGuidance, .writekeep, .kept, .intospace {
+		background-size: cover;
 		height:100vh;
 		display:flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 	}
-	.acceptletgo {
+	.acceptletgo, .acceptkeep {
 		display:grid;
 		grid-template-columns: 1fr 1fr;
 		text-align: center;
@@ -146,15 +184,8 @@
 	.letgo, .writeletgo, .acceptletgo{
 		background-color: #495D5A;
 	}
-	.keep, .writekeep {
-		background-color: #E0C87E;
-	}
-	.intospace, .writekeep, .acceptkeep, .kept  {
-		background-size: contain;
-		display:flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
+	.kept, .keep, .writekeep, .acceptkeep {
+		background-color: rgb(213, 184, 97);
 	}
 
 	.img-keep, .img-letgo {
@@ -171,19 +202,23 @@
 	}
 
 	button, textarea, p.acceptText {
-		margin: 0.8rem;
-		padding: 1rem;
+		padding: 0.8rem;
+		font-size: 1rem;
+		font-weight: 300;
 		border-radius: 0.8rem;
 		border: 0;
+	}
+	textarea, p.acceptText{
+		background-color: rgba(245, 245, 245, 0.651)
+	}
+	button {
+		margin-top: 1rem;
 		background-color: rgba(245, 245, 245, 0.836)
 	}
 	.btn-start {
 		z-index: 1;
 		position: relative;
-		top: 7rem;
-	}
-	.btn-acceptkeep {
-		text-align: center;
+		top: 6.6rem;
 	}
 	div{
 		width:100%;
@@ -191,11 +226,12 @@
 	}
 
 	h1 {
-		font-family: Arial, Helvetica, sans-serif;
-		font-weight: 100;
-		font-size: 2rem;
+		font-family: poppins;
+		font-weight: 200;
+		font-size: 1.6rem;
 		text-align: center;
-		margin: 1rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
 		color: white;
 		padding: 0rem 2rem;
 	}
@@ -204,14 +240,19 @@
 		position: relative;
 		top: 7rem;
 	}
+	.h1-write{
+		font-size: 1.5rem;
+	}
+	p {
+		font-weight: 200;
+		font-size: 1.1rem;
+		margin: 1rem;
+		color: white;
+	}
 
 	#b {
   		quotes: "“" "„";	
 		color: black;
-	}
-	p {
-		margin: 1rem;
-		color: white;
 	}
 
 </style>

@@ -1,10 +1,48 @@
 <script>
-	export let name;
+	let personNummer = ""
+	let kategori = ""
+
+	let activity = { };
+		const getActivity = async () => {
+		const response = await fetch(`https://www.boredapi.com/api/activity?participants=${personNummer}&type=${kategori}`)
+		const json = await response.json ()
+		activity = json
+	} //Arrow function
+	getActivity()
+	//async betyr at man skal vente på noe og da bruker man await
 </script>
 
 <main>
-	<h1>Hello!! {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<div>
+	<h1>Activities</h1>
+	<select bind:value={personNummer}>
+		<option value='1'>1 person</option>
+		<option value='2'>2 persons</option>
+		<option value='3'>3 persons</option>
+	</select>
+	<select bind:value={kategori}>
+		<option value='music'>music</option>
+		<option value='charity'>charity</option>
+		<option value='social'>social</option>
+		<option value='social'>education</option>
+		<option value='social'>relaxation</option>
+	</select>
+	<button on:click={getActivity}>Find Activity</button>
+	</div>
+		
+<section>
+	{#if activity}
+	<div>
+		<h2>{activity.activity}</h2>
+		<p>Type: {activity.type}</p>
+		<p>Accessibility: {activity.accessibility}</p>
+		<p>Participants: {activity.participants}</p>
+		<p>Link: {activity.link}</p>
+	</div>
+	{:else}
+		<p>Loading Activity......</p>
+	{/if}
+</section>
 </main>
 
 <style>

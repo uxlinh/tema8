@@ -1,6 +1,6 @@
 {
   "name": "svelte-electron-forge",
-  "productName": "svelte-electron-forge",
+  "productName": "Feel Fine",
   "version": "1.0.0",
   "description": "Svelte + Electron Forge",
   "main": "src/index.js",
@@ -20,7 +20,7 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "public/AppIcon.icns"
+        "icon": "public/appicon.icns"
       },
       "makers": [
         {

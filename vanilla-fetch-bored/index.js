@@ -10,9 +10,9 @@ const link = document.querySelector('#link')
 
 
 button.addEventListener('click', () => {
-    fetch('https://www.boredapi.com/api/activity')
-        .then( res => res.json() )
-            .then( json => {
+    fetch('https://www.boredapi.com/api/activity') //asynkron funksjon
+        .then( res => res.json() ) //res = response, then er også en asynchron funksjon
+            .then( json => { //kunne kalt json for noe annet
                 console.log(json)
                 title.innerHTML = json.activity
                 type.innerHTML = json.type ? json.type : ''
