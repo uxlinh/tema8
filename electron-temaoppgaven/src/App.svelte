@@ -1,21 +1,24 @@
 <script>
-	import {fade, fly, scale} from 'svelte/transition';
+	import {fade, fly, scale} from 'svelte/transition'; 
 	//steps: choose | writeletgo | writekeep | acceptletgo | acceptkeep | random | intospace
 	let step = 'choose'
-	let keepthought
 	let letgothought
-	let randomThought
-	const setRandom = () => {
-		randomThought = thoughts[Math.floor( Math.random() * thoughts.length)]
+
+	let keepthought
+	let thoughts = []
+	let addThoughts = () => {
+		thoughts = [keepthought, ...thoughts]
 	}
 
-	let thoughts = []
-	$: console.log(thoughts)
-
+	let removeThought = (index) => {
+		thoughts.splice(index, 1)
+		thoughts = thoughts;
+	}
 
 	const bgAccept = './assets/acceptletgo.png'
 	const bgSpace = './assets/space.jpg'
 	const bgKept = './assets/kept.png'
+     
 
 	let showFav
 </script>
@@ -34,6 +37,7 @@
 			<button class="btn-start" on:click={()=>step='writeletgo'}>Let go</button>
 			<img class="img-letgo" src="./assets/dandelion.png" alt="Let Go Picture">
 		</div>
+
 		{#if !showFav} 
 			<div class="keep">
 				<h1 class="h1-start">Got some positive thoughts you want to keep?</h1>
@@ -44,6 +48,7 @@
 				<img class="img-keep" src="./assets/keep.png" alt="Keep Picture">
 			</div>
 		{/if}
+
 	</div>
 	{/if}
 
@@ -77,12 +82,22 @@
 	{/if}
 	{#if step=='intospace'}
 		<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
+
 		<div class="back" on:click={()=> { step='choose'; letgothought = '' } }><img src="./assets/back.svg" alt="Arrow Back"></div>
-		<div class="intospace" style="background-image: url('{bgSpace}')">
-			<h1>Your thoughts are flown into space</h1>
-			<button on:click={()=>step='choose'}>Back to home</button>
-		</div>
+
+	
+			<div class="intospace" style="background-image: url('{bgSpace}')">
+				<h1>Your thoughts are flown into space</h1>
+				<button on:click={()=> step='choose'}>Back to home</button>
+			</div>
+		
+
 	{/if}
+
+
+
+
+
 
 <!-- Keep -->
 	{#if step=='writekeep'}
@@ -91,7 +106,7 @@
 		<div class="writekeep">		
 			<h1 class="h1-write">Write a positive thought or feedback you have received. For example: “What would your friends say about you?”</h1>
 			<textarea cols="45" rows="10" bind:value={keepthought} />
-			<button on:click={ () => { step='acceptkeep'; thoughts = [keepthought, ...thoughts]; }}>Keep thoughts</button>
+			<button on:click={ () => { step='acceptkeep'; addThoughts(); }}>Keep thoughts</button>
 		</div>
 	{/if}
 
@@ -105,20 +120,23 @@
 			<div class="acceptGuidance">
 					<h1 class="h1-write">Kept it!</h1>
 					<p>Your positive thoughts/feedback are kept for future review. They can provide you warm feelings for good and bad days.</p>
-					<button on:click={ ()=> { keepthought = ''; step='writekeep' } }>Keep more positive thoughts</button>		
-						<button on:click={ ()=> { step='kept'; keepthought = ''} }>See kept thoughts</button>		
+					<button on:click={ ()=> { step='writekeep'; keepthought = '' } }>Keep more positive thoughts</button>		
+					<button on:click={ ()=> { step='kept'; keepthought = '' } }>See kept thoughts</button>		
 			</div>
 		</div>
 	{/if}
 
 	{#if step=='kept'}
-	<div class="logo"><img src="./assets/feelfinelogo.svg" alt="Logo"></div>
-	<div class="back" on:click={()=> { step='acceptkeep'} }><img src="./assets/back.svg" alt="Arrow Back"></div>
+		<div class="back" on:click={()=> { step='acceptkeep'} }><img src="./assets/back.svg" alt="Arrow Back"></div>
 		<div class="kept" style="background-image: url('{bgKept}')">
-		<h1>Kept thoughts</h1>
-		{#each thoughts as thought}
-			<p class="acceptText"><q id="b">{thought}</q></p>	
-		{/each}
+			<h1>Kept thoughts</h1>
+			{#each thoughts as thought, index}
+				<div class="keptThoughts">
+					<div class="keptThoughts-item1"><p class="acceptText"> <q id="b">{thought} </q> </p></div>
+					<div class="keptThoughts-item2"><span on:click={() => removeThought(index)}> Remove </span></div>
+				</div>	
+				
+			{/each}
 			<button on:click={ ()=> { step='choose' } }>Back to home</button>	
 		</div>
 	{/if}
@@ -174,25 +192,49 @@
 		grid-template-columns: 1fr 1fr;
 		text-align: center;
 	}
+	.letgo, .writeletgo, .acceptletgo{
+		background-color: #495D5A;
+	}
+	.kept, .keep, .writekeep, .acceptkeep {
+		background-color: rgb(213, 184, 97);
+	}
 	.writeletgo, .acceptGuidance, .writekeep, .kept, .intospace {
-		background-size: cover;
+		background-repeat: no-repeat;
+  		background-size: cover 100% 100%;
 		height:100vh;
 		display:flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 	}
+	.kept {
+		height:100vh;
+		width:100vw;
+		display:grid;
+		place-items:center;
+	}
+	div.keptThoughts {
+		display:grid;
+		grid-template-columns: 1fr 1fr;
+		place-items: center;
+		max-width: 40rem;
+	}
+	div.keptThoughts-item1{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 35rem;
+	}
+	div.keptThoughts-item2{
+		display: flex;
+		align-items: center;
+		width: 5rem;
+	}
 	.acceptletgo, .acceptkeep {
 		display:grid;
 		grid-template-columns: 1fr 1fr;
 		text-align: center;
 		background-size: cover;
-	}
-	.letgo, .writeletgo, .acceptletgo{
-		background-color: #495D5A;
-	}
-	.kept, .keep, .writekeep, .acceptkeep {
-		background-color: rgb(213, 184, 97);
 	}
 
 	.img-keep, .img-letgo {

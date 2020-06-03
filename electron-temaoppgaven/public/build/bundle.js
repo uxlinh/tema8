@@ -549,11 +549,12 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[25] = list[i];
+    	child_ctx[26] = list[i];
+    	child_ctx[28] = i;
     	return child_ctx;
     }
 
-    // (29:1) {#if step=='choose'}
+    // (32:1) {#if step=='choose'}
     function create_if_block_6(ctx) {
     	let div0;
     	let img0;
@@ -569,7 +570,7 @@ var app = (function () {
     	let img1_src_value;
     	let t5;
     	let dispose;
-    	let if_block = !/*showFav*/ ctx[4] && create_if_block_7(ctx);
+    	let if_block = !/*showFav*/ ctx[6] && create_if_block_7(ctx);
 
     	const block = {
     		c: function create() {
@@ -589,22 +590,22 @@ var app = (function () {
     			if (if_block) if_block.c();
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-173xkbd");
-    			add_location(img0, file, 29, 19, 581);
-    			attr_dev(div0, "class", "logo svelte-173xkbd");
-    			add_location(div0, file, 29, 1, 563);
-    			attr_dev(h1, "class", "h1-start svelte-173xkbd");
-    			add_location(h1, file, 32, 3, 684);
-    			attr_dev(button, "class", "btn-start svelte-173xkbd");
-    			add_location(button, file, 33, 3, 761);
-    			attr_dev(img1, "class", "img-letgo svelte-173xkbd");
+    			attr_dev(img0, "class", "svelte-e0or1i");
+    			add_location(img0, file, 32, 19, 598);
+    			attr_dev(div0, "class", "logo svelte-e0or1i");
+    			add_location(div0, file, 32, 1, 580);
+    			attr_dev(h1, "class", "h1-start svelte-e0or1i");
+    			add_location(h1, file, 35, 3, 701);
+    			attr_dev(button, "class", "btn-start svelte-e0or1i");
+    			add_location(button, file, 36, 3, 778);
+    			attr_dev(img1, "class", "img-letgo svelte-e0or1i");
     			if (img1.src !== (img1_src_value = "./assets/dandelion.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Let Go Picture");
-    			add_location(img1, file, 34, 3, 839);
-    			attr_dev(div1, "class", "letgo svelte-173xkbd");
-    			add_location(div1, file, 31, 2, 661);
-    			attr_dev(div2, "class", "choose svelte-173xkbd");
-    			add_location(div2, file, 30, 1, 638);
+    			add_location(img1, file, 37, 3, 856);
+    			attr_dev(div1, "class", "letgo svelte-e0or1i");
+    			add_location(div1, file, 34, 2, 678);
+    			attr_dev(div2, "class", "choose svelte-e0or1i");
+    			add_location(div2, file, 33, 1, 655);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -622,7 +623,7 @@ var app = (function () {
     			dispose = listen_dev(button, "click", /*click_handler*/ ctx[7], false, false, false);
     		},
     		p: function update(ctx, dirty) {
-    			if (!/*showFav*/ ctx[4]) if_block.p(ctx, dirty);
+    			if (!/*showFav*/ ctx[6]) if_block.p(ctx, dirty);
     		},
     		i: function intro(local) {
     			transition_in(if_block);
@@ -641,14 +642,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(29:1) {#if step=='choose'}",
+    		source: "(32:1) {#if step=='choose'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (37:2) {#if !showFav}
+    // (41:2) {#if !showFav}
     function create_if_block_7(ctx) {
     	let div;
     	let h1;
@@ -673,16 +674,16 @@ var app = (function () {
     			if (if_block) if_block.c();
     			t4 = space();
     			img = element("img");
-    			attr_dev(h1, "class", "h1-start svelte-173xkbd");
-    			add_location(h1, file, 38, 4, 966);
-    			attr_dev(button, "class", "btn-start svelte-173xkbd");
-    			add_location(button, file, 39, 4, 1041);
-    			attr_dev(img, "class", "img-keep svelte-173xkbd");
+    			attr_dev(h1, "class", "h1-start svelte-e0or1i");
+    			add_location(h1, file, 42, 4, 984);
+    			attr_dev(button, "class", "btn-start svelte-e0or1i");
+    			add_location(button, file, 43, 4, 1059);
+    			attr_dev(img, "class", "img-keep svelte-e0or1i");
     			if (img.src !== (img_src_value = "./assets/keep.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Keep Picture");
-    			add_location(img, file, 43, 4, 1234);
-    			attr_dev(div, "class", "keep svelte-173xkbd");
-    			add_location(div, file, 37, 3, 943);
+    			add_location(img, file, 47, 4, 1252);
+    			attr_dev(div, "class", "keep svelte-e0or1i");
+    			add_location(div, file, 41, 3, 961);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -726,14 +727,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(37:2) {#if !showFav}",
+    		source: "(41:2) {#if !showFav}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (41:3) {#if thoughts.length > 0}
+    // (45:3) {#if thoughts.length > 0}
     function create_if_block_8(ctx) {
     	let button;
     	let button_intro;
@@ -743,8 +744,8 @@ var app = (function () {
     		c: function create() {
     			button = element("button");
     			button.textContent = "Kept";
-    			attr_dev(button, "class", "btn-start svelte-173xkbd");
-    			add_location(button, file, 41, 4, 1146);
+    			attr_dev(button, "class", "btn-start svelte-e0or1i");
+    			add_location(button, file, 45, 4, 1164);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -770,14 +771,14 @@ var app = (function () {
     		block,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(41:3) {#if thoughts.length > 0}",
+    		source: "(45:3) {#if thoughts.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (51:1) {#if step=='writeletgo'}
+    // (56:1) {#if step=='writeletgo'}
     function create_if_block_5(ctx) {
     	let div0;
     	let img0;
@@ -813,27 +814,27 @@ var app = (function () {
     			button.textContent = "I have recognised my thoughts";
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-173xkbd");
-    			add_location(img0, file, 51, 20, 1396);
-    			attr_dev(div0, "class", "logo svelte-173xkbd");
-    			add_location(div0, file, 51, 2, 1378);
+    			attr_dev(img0, "class", "svelte-e0or1i");
+    			add_location(img0, file, 56, 20, 1415);
+    			attr_dev(div0, "class", "logo svelte-e0or1i");
+    			add_location(div0, file, 56, 2, 1397);
     			if (img1.src !== (img1_src_value = "./assets/back.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Arrow Back");
-    			attr_dev(img1, "class", "svelte-173xkbd");
-    			add_location(img1, file, 52, 74, 1525);
-    			attr_dev(div1, "class", "back svelte-173xkbd");
-    			add_location(div1, file, 52, 2, 1453);
-    			attr_dev(h1, "class", "h1-write svelte-173xkbd");
-    			add_location(h1, file, 54, 3, 1608);
+    			attr_dev(img1, "class", "svelte-e0or1i");
+    			add_location(img1, file, 57, 74, 1544);
+    			attr_dev(div1, "class", "back svelte-e0or1i");
+    			add_location(div1, file, 57, 2, 1472);
+    			attr_dev(h1, "class", "h1-write svelte-e0or1i");
+    			add_location(h1, file, 59, 3, 1627);
     			attr_dev(textarea, "cols", "45");
     			attr_dev(textarea, "rows", "10");
     			attr_dev(textarea, "placeholder", "Write down your thoughts...");
-    			attr_dev(textarea, "class", "svelte-173xkbd");
-    			add_location(textarea, file, 55, 3, 1681);
-    			attr_dev(button, "class", "svelte-173xkbd");
-    			add_location(button, file, 56, 3, 1784);
-    			attr_dev(div2, "class", "writeletgo svelte-173xkbd");
-    			add_location(div2, file, 53, 2, 1580);
+    			attr_dev(textarea, "class", "svelte-e0or1i");
+    			add_location(textarea, file, 60, 3, 1700);
+    			attr_dev(button, "class", "svelte-e0or1i");
+    			add_location(button, file, 61, 3, 1803);
+    			attr_dev(div2, "class", "writeletgo svelte-e0or1i");
+    			add_location(div2, file, 58, 2, 1599);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -846,7 +847,7 @@ var app = (function () {
     			append_dev(div2, h1);
     			append_dev(div2, t3);
     			append_dev(div2, textarea);
-    			set_input_value(textarea, /*letgothought*/ ctx[2]);
+    			set_input_value(textarea, /*letgothought*/ ctx[1]);
     			append_dev(div2, t4);
     			append_dev(div2, button);
 
@@ -857,8 +858,8 @@ var app = (function () {
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*letgothought*/ 4) {
-    				set_input_value(textarea, /*letgothought*/ ctx[2]);
+    			if (dirty & /*letgothought*/ 2) {
+    				set_input_value(textarea, /*letgothought*/ ctx[1]);
     			}
     		},
     		d: function destroy(detaching) {
@@ -875,14 +876,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(51:1) {#if step=='writeletgo'}",
+    		source: "(56:1) {#if step=='writeletgo'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (60:1) {#if step=='acceptletgo'}
+    // (65:1) {#if step=='acceptletgo'}
     function create_if_block_4(ctx) {
     	let div0;
     	let img0;
@@ -922,7 +923,7 @@ var app = (function () {
     			div2 = element("div");
     			p0 = element("p");
     			q = element("q");
-    			t2 = text(/*letgothought*/ ctx[2]);
+    			t2 = text(/*letgothought*/ ctx[1]);
     			t3 = space();
     			div3 = element("div");
     			h1 = element("h1");
@@ -941,38 +942,38 @@ var app = (function () {
     			button.textContent = "Accept & Let go";
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-173xkbd");
-    			add_location(img0, file, 60, 20, 1928);
-    			attr_dev(div0, "class", "logo svelte-173xkbd");
-    			add_location(div0, file, 60, 2, 1910);
+    			attr_dev(img0, "class", "svelte-e0or1i");
+    			add_location(img0, file, 65, 20, 1947);
+    			attr_dev(div0, "class", "logo svelte-e0or1i");
+    			add_location(div0, file, 65, 2, 1929);
     			if (img1.src !== (img1_src_value = "./assets/back.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Arrow Back");
-    			attr_dev(img1, "class", "svelte-173xkbd");
-    			add_location(img1, file, 61, 78, 2061);
-    			attr_dev(div1, "class", "back svelte-173xkbd");
-    			add_location(div1, file, 61, 2, 1985);
+    			attr_dev(img1, "class", "svelte-e0or1i");
+    			add_location(img1, file, 66, 78, 2080);
+    			attr_dev(div1, "class", "back svelte-e0or1i");
+    			add_location(div1, file, 66, 2, 2004);
     			attr_dev(q, "id", "b");
-    			attr_dev(q, "class", "svelte-173xkbd");
-    			add_location(q, file, 64, 27, 2246);
-    			attr_dev(p0, "class", "acceptText svelte-173xkbd");
-    			add_location(p0, file, 64, 5, 2224);
-    			attr_dev(div2, "class", "acceptGuidance svelte-173xkbd");
-    			add_location(div2, file, 63, 4, 2190);
-    			attr_dev(h1, "class", "h1-write svelte-173xkbd");
-    			add_location(h1, file, 67, 5, 2328);
-    			attr_dev(p1, "class", "svelte-173xkbd");
-    			add_location(p1, file, 68, 5, 2375);
-    			attr_dev(p2, "class", "svelte-173xkbd");
-    			add_location(p2, file, 69, 5, 2430);
-    			attr_dev(p3, "class", "svelte-173xkbd");
-    			add_location(p3, file, 71, 5, 2538);
-    			attr_dev(button, "class", "svelte-173xkbd");
-    			add_location(button, file, 73, 5, 2579);
-    			attr_dev(div3, "class", "acceptGuidance svelte-173xkbd");
-    			add_location(div3, file, 66, 4, 2294);
-    			attr_dev(div4, "class", "acceptletgo svelte-173xkbd");
+    			attr_dev(q, "class", "svelte-e0or1i");
+    			add_location(q, file, 69, 27, 2265);
+    			attr_dev(p0, "class", "acceptText svelte-e0or1i");
+    			add_location(p0, file, 69, 5, 2243);
+    			attr_dev(div2, "class", "acceptGuidance svelte-e0or1i");
+    			add_location(div2, file, 68, 4, 2209);
+    			attr_dev(h1, "class", "h1-write svelte-e0or1i");
+    			add_location(h1, file, 72, 5, 2347);
+    			attr_dev(p1, "class", "svelte-e0or1i");
+    			add_location(p1, file, 73, 5, 2394);
+    			attr_dev(p2, "class", "svelte-e0or1i");
+    			add_location(p2, file, 74, 5, 2449);
+    			attr_dev(p3, "class", "svelte-e0or1i");
+    			add_location(p3, file, 76, 5, 2557);
+    			attr_dev(button, "class", "svelte-e0or1i");
+    			add_location(button, file, 78, 5, 2598);
+    			attr_dev(div3, "class", "acceptGuidance svelte-e0or1i");
+    			add_location(div3, file, 71, 4, 2313);
+    			attr_dev(div4, "class", "acceptletgo svelte-e0or1i");
     			set_style(div4, "background-image", "url('" + bgAccept + "')");
-    			add_location(div4, file, 62, 2, 2116);
+    			add_location(div4, file, 67, 2, 2135);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1004,7 +1005,7 @@ var app = (function () {
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*letgothought*/ 4) set_data_dev(t2, /*letgothought*/ ctx[2]);
+    			if (dirty & /*letgothought*/ 2) set_data_dev(t2, /*letgothought*/ ctx[1]);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
@@ -1020,14 +1021,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(60:1) {#if step=='acceptletgo'}",
+    		source: "(65:1) {#if step=='acceptletgo'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (78:1) {#if step=='intospace'}
+    // (83:1) {#if step=='intospace'}
     function create_if_block_3(ctx) {
     	let div0;
     	let img0;
@@ -1059,23 +1060,23 @@ var app = (function () {
     			button.textContent = "Back to home";
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-173xkbd");
-    			add_location(img0, file, 78, 20, 2741);
-    			attr_dev(div0, "class", "logo svelte-173xkbd");
-    			add_location(div0, file, 78, 2, 2723);
+    			attr_dev(img0, "class", "svelte-e0or1i");
+    			add_location(img0, file, 83, 20, 2760);
+    			attr_dev(div0, "class", "logo svelte-e0or1i");
+    			add_location(div0, file, 83, 2, 2742);
     			if (img1.src !== (img1_src_value = "./assets/back.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Arrow Back");
-    			attr_dev(img1, "class", "svelte-173xkbd");
-    			add_location(img1, file, 79, 74, 2870);
-    			attr_dev(div1, "class", "back svelte-173xkbd");
-    			add_location(div1, file, 79, 2, 2798);
-    			attr_dev(h1, "class", "svelte-173xkbd");
-    			add_location(h1, file, 81, 3, 2995);
-    			attr_dev(button, "class", "svelte-173xkbd");
-    			add_location(button, file, 82, 3, 3042);
-    			attr_dev(div2, "class", "intospace svelte-173xkbd");
+    			attr_dev(img1, "class", "svelte-e0or1i");
+    			add_location(img1, file, 85, 74, 2890);
+    			attr_dev(div1, "class", "back svelte-e0or1i");
+    			add_location(div1, file, 85, 2, 2818);
+    			attr_dev(h1, "class", "svelte-e0or1i");
+    			add_location(h1, file, 89, 4, 3020);
+    			attr_dev(button, "class", "svelte-e0or1i");
+    			add_location(button, file, 90, 4, 3068);
+    			attr_dev(div2, "class", "intospace svelte-e0or1i");
     			set_style(div2, "background-image", "url('" + bgSpace + "')");
-    			add_location(div2, file, 80, 2, 2925);
+    			add_location(div2, file, 88, 3, 2949);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1109,14 +1110,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(78:1) {#if step=='intospace'}",
+    		source: "(83:1) {#if step=='intospace'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (88:1) {#if step=='writekeep'}
+    // (103:1) {#if step=='writekeep'}
     function create_if_block_2(ctx) {
     	let div0;
     	let img0;
@@ -1152,26 +1153,26 @@ var app = (function () {
     			button.textContent = "Keep thoughts";
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-173xkbd");
-    			add_location(img0, file, 88, 20, 3177);
-    			attr_dev(div0, "class", "logo svelte-173xkbd");
-    			add_location(div0, file, 88, 2, 3159);
+    			attr_dev(img0, "class", "svelte-e0or1i");
+    			add_location(img0, file, 103, 20, 3214);
+    			attr_dev(div0, "class", "logo svelte-e0or1i");
+    			add_location(div0, file, 103, 2, 3196);
     			if (img1.src !== (img1_src_value = "./assets/back.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Arrow Back");
-    			attr_dev(img1, "class", "svelte-173xkbd");
-    			add_location(img1, file, 89, 72, 3304);
-    			attr_dev(div1, "class", "back svelte-173xkbd");
-    			add_location(div1, file, 89, 2, 3234);
-    			attr_dev(h1, "class", "h1-write svelte-173xkbd");
-    			add_location(h1, file, 91, 3, 3388);
+    			attr_dev(img1, "class", "svelte-e0or1i");
+    			add_location(img1, file, 104, 72, 3341);
+    			attr_dev(div1, "class", "back svelte-e0or1i");
+    			add_location(div1, file, 104, 2, 3271);
+    			attr_dev(h1, "class", "h1-write svelte-e0or1i");
+    			add_location(h1, file, 106, 3, 3425);
     			attr_dev(textarea, "cols", "45");
     			attr_dev(textarea, "rows", "10");
-    			attr_dev(textarea, "class", "svelte-173xkbd");
-    			add_location(textarea, file, 92, 3, 3527);
-    			attr_dev(button, "class", "svelte-173xkbd");
-    			add_location(button, file, 93, 3, 3588);
-    			attr_dev(div2, "class", "writekeep svelte-173xkbd");
-    			add_location(div2, file, 90, 2, 3359);
+    			attr_dev(textarea, "class", "svelte-e0or1i");
+    			add_location(textarea, file, 107, 3, 3564);
+    			attr_dev(button, "class", "svelte-e0or1i");
+    			add_location(button, file, 108, 3, 3625);
+    			attr_dev(div2, "class", "writekeep svelte-e0or1i");
+    			add_location(div2, file, 105, 2, 3396);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1184,7 +1185,7 @@ var app = (function () {
     			append_dev(div2, h1);
     			append_dev(div2, t3);
     			append_dev(div2, textarea);
-    			set_input_value(textarea, /*keepthought*/ ctx[1]);
+    			set_input_value(textarea, /*keepthought*/ ctx[2]);
     			append_dev(div2, t4);
     			append_dev(div2, button);
 
@@ -1195,8 +1196,8 @@ var app = (function () {
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*keepthought*/ 2) {
-    				set_input_value(textarea, /*keepthought*/ ctx[1]);
+    			if (dirty & /*keepthought*/ 4) {
+    				set_input_value(textarea, /*keepthought*/ ctx[2]);
     			}
     		},
     		d: function destroy(detaching) {
@@ -1213,14 +1214,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(88:1) {#if step=='writekeep'}",
+    		source: "(103:1) {#if step=='writekeep'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (98:1) {#if step=='acceptkeep'}
+    // (113:1) {#if step=='acceptkeep'}
     function create_if_block_1(ctx) {
     	let div0;
     	let img0;
@@ -1258,7 +1259,7 @@ var app = (function () {
     			div2 = element("div");
     			p0 = element("p");
     			q = element("q");
-    			t2 = text(/*keepthought*/ ctx[1]);
+    			t2 = text(/*keepthought*/ ctx[2]);
     			t3 = space();
     			div3 = element("div");
     			h1 = element("h1");
@@ -1274,35 +1275,35 @@ var app = (function () {
     			button1.textContent = "See kept thoughts";
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-173xkbd");
-    			add_location(img0, file, 98, 20, 3762);
-    			attr_dev(div0, "class", "logo svelte-173xkbd");
-    			add_location(div0, file, 98, 2, 3744);
+    			attr_dev(img0, "class", "svelte-e0or1i");
+    			add_location(img0, file, 113, 20, 3775);
+    			attr_dev(div0, "class", "logo svelte-e0or1i");
+    			add_location(div0, file, 113, 2, 3757);
     			if (img1.src !== (img1_src_value = "./assets/back.svg")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Arrow Back");
-    			attr_dev(img1, "class", "svelte-173xkbd");
-    			add_location(img1, file, 99, 57, 3874);
-    			attr_dev(div1, "class", "back svelte-173xkbd");
-    			add_location(div1, file, 99, 2, 3819);
+    			attr_dev(img1, "class", "svelte-e0or1i");
+    			add_location(img1, file, 114, 57, 3887);
+    			attr_dev(div1, "class", "back svelte-e0or1i");
+    			add_location(div1, file, 114, 2, 3832);
     			attr_dev(q, "id", "b");
-    			attr_dev(q, "class", "svelte-173xkbd");
-    			add_location(q, file, 102, 27, 4013);
-    			attr_dev(p0, "class", "acceptText svelte-173xkbd");
-    			add_location(p0, file, 102, 5, 3991);
-    			attr_dev(div2, "class", "acceptGuidance svelte-173xkbd");
-    			add_location(div2, file, 101, 3, 3957);
-    			attr_dev(h1, "class", "h1-write svelte-173xkbd");
-    			add_location(h1, file, 105, 5, 4092);
-    			attr_dev(p1, "class", "svelte-173xkbd");
-    			add_location(p1, file, 106, 5, 4132);
-    			attr_dev(button0, "class", "svelte-173xkbd");
-    			add_location(button0, file, 107, 5, 4262);
-    			attr_dev(button1, "class", "svelte-173xkbd");
-    			add_location(button1, file, 108, 6, 4372);
-    			attr_dev(div3, "class", "acceptGuidance svelte-173xkbd");
-    			add_location(div3, file, 104, 3, 4058);
-    			attr_dev(div4, "class", "acceptkeep svelte-173xkbd");
-    			add_location(div4, file, 100, 2, 3929);
+    			attr_dev(q, "class", "svelte-e0or1i");
+    			add_location(q, file, 117, 27, 4026);
+    			attr_dev(p0, "class", "acceptText svelte-e0or1i");
+    			add_location(p0, file, 117, 5, 4004);
+    			attr_dev(div2, "class", "acceptGuidance svelte-e0or1i");
+    			add_location(div2, file, 116, 3, 3970);
+    			attr_dev(h1, "class", "h1-write svelte-e0or1i");
+    			add_location(h1, file, 120, 5, 4105);
+    			attr_dev(p1, "class", "svelte-e0or1i");
+    			add_location(p1, file, 121, 5, 4145);
+    			attr_dev(button0, "class", "svelte-e0or1i");
+    			add_location(button0, file, 122, 5, 4275);
+    			attr_dev(button1, "class", "svelte-e0or1i");
+    			add_location(button1, file, 123, 5, 4384);
+    			attr_dev(div3, "class", "acceptGuidance svelte-e0or1i");
+    			add_location(div3, file, 119, 3, 4071);
+    			attr_dev(div4, "class", "acceptkeep svelte-e0or1i");
+    			add_location(div4, file, 115, 2, 3942);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1333,7 +1334,7 @@ var app = (function () {
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*keepthought*/ 2) set_data_dev(t2, /*keepthought*/ ctx[1]);
+    			if (dirty & /*keepthought*/ 4) set_data_dev(t2, /*keepthought*/ ctx[2]);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div0);
@@ -1349,27 +1350,23 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(98:1) {#if step=='acceptkeep'}",
+    		source: "(113:1) {#if step=='acceptkeep'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (114:1) {#if step=='kept'}
+    // (129:1) {#if step=='kept'}
     function create_if_block(ctx) {
     	let div0;
-    	let img0;
-    	let img0_src_value;
+    	let img;
+    	let img_src_value;
     	let t0;
     	let div1;
-    	let img1;
-    	let img1_src_value;
-    	let t1;
-    	let div2;
     	let h1;
+    	let t2;
     	let t3;
-    	let t4;
     	let button;
     	let dispose;
     	let each_value = /*thoughts*/ ctx[3];
@@ -1383,68 +1380,56 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div0 = element("div");
-    			img0 = element("img");
+    			img = element("img");
     			t0 = space();
     			div1 = element("div");
-    			img1 = element("img");
-    			t1 = space();
-    			div2 = element("div");
     			h1 = element("h1");
     			h1.textContent = "Kept thoughts";
-    			t3 = space();
+    			t2 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t4 = space();
+    			t3 = space();
     			button = element("button");
     			button.textContent = "Back to home";
-    			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
-    			attr_dev(img0, "alt", "Logo");
-    			attr_dev(img0, "class", "svelte-173xkbd");
-    			add_location(img0, file, 114, 19, 4526);
-    			attr_dev(div0, "class", "logo svelte-173xkbd");
-    			add_location(div0, file, 114, 1, 4508);
-    			if (img1.src !== (img1_src_value = "./assets/back.svg")) attr_dev(img1, "src", img1_src_value);
-    			attr_dev(img1, "alt", "Arrow Back");
-    			attr_dev(img1, "class", "svelte-173xkbd");
-    			add_location(img1, file, 115, 57, 4638);
-    			attr_dev(div1, "class", "back svelte-173xkbd");
-    			add_location(div1, file, 115, 1, 4582);
-    			attr_dev(h1, "class", "svelte-173xkbd");
-    			add_location(h1, file, 117, 2, 4756);
-    			attr_dev(button, "class", "svelte-173xkbd");
-    			add_location(button, file, 121, 3, 4876);
-    			attr_dev(div2, "class", "kept svelte-173xkbd");
-    			set_style(div2, "background-image", "url('" + bgKept + "')");
-    			add_location(div2, file, 116, 2, 4693);
+    			if (img.src !== (img_src_value = "./assets/back.svg")) attr_dev(img, "src", img_src_value);
+    			attr_dev(img, "alt", "Arrow Back");
+    			attr_dev(img, "class", "svelte-e0or1i");
+    			add_location(img, file, 129, 58, 4578);
+    			attr_dev(div0, "class", "back svelte-e0or1i");
+    			add_location(div0, file, 129, 2, 4522);
+    			attr_dev(h1, "class", "svelte-e0or1i");
+    			add_location(h1, file, 131, 3, 4697);
+    			attr_dev(button, "class", "svelte-e0or1i");
+    			add_location(button, file, 139, 3, 5019);
+    			attr_dev(div1, "class", "kept svelte-e0or1i");
+    			set_style(div1, "background-image", "url('" + bgKept + "')");
+    			add_location(div1, file, 130, 2, 4633);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
-    			append_dev(div0, img0);
+    			append_dev(div0, img);
     			insert_dev(target, t0, anchor);
     			insert_dev(target, div1, anchor);
-    			append_dev(div1, img1);
-    			insert_dev(target, t1, anchor);
-    			insert_dev(target, div2, anchor);
-    			append_dev(div2, h1);
-    			append_dev(div2, t3);
+    			append_dev(div1, h1);
+    			append_dev(div1, t2);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(div2, null);
+    				each_blocks[i].m(div1, null);
     			}
 
-    			append_dev(div2, t4);
-    			append_dev(div2, button);
+    			append_dev(div1, t3);
+    			append_dev(div1, button);
 
     			dispose = [
-    				listen_dev(div1, "click", /*click_handler_14*/ ctx[23], false, false, false),
-    				listen_dev(button, "click", /*click_handler_15*/ ctx[24], false, false, false)
+    				listen_dev(div0, "click", /*click_handler_14*/ ctx[23], false, false, false),
+    				listen_dev(button, "click", /*click_handler_16*/ ctx[25], false, false, false)
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*thoughts*/ 8) {
+    			if (dirty & /*removeThought, thoughts*/ 40) {
     				each_value = /*thoughts*/ ctx[3];
     				validate_each_argument(each_value);
     				let i;
@@ -1457,7 +1442,7 @@ var app = (function () {
     					} else {
     						each_blocks[i] = create_each_block(child_ctx);
     						each_blocks[i].c();
-    						each_blocks[i].m(div2, t4);
+    						each_blocks[i].m(div1, t3);
     					}
     				}
 
@@ -1472,8 +1457,6 @@ var app = (function () {
     			if (detaching) detach_dev(div0);
     			if (detaching) detach_dev(t0);
     			if (detaching) detach_dev(div1);
-    			if (detaching) detach_dev(t1);
-    			if (detaching) detach_dev(div2);
     			destroy_each(each_blocks, detaching);
     			run_all(dispose);
     		}
@@ -1483,41 +1466,73 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(114:1) {#if step=='kept'}",
+    		source: "(129:1) {#if step=='kept'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (119:2) {#each thoughts as thought}
+    // (133:3) {#each thoughts as thought, index}
     function create_each_block(ctx) {
+    	let div2;
+    	let div0;
     	let p;
     	let q;
-    	let t_value = /*thought*/ ctx[25] + "";
-    	let t;
+    	let t0_value = /*thought*/ ctx[26] + "";
+    	let t0;
+    	let t1;
+    	let div1;
+    	let span;
+    	let dispose;
+
+    	function click_handler_15(...args) {
+    		return /*click_handler_15*/ ctx[24](/*index*/ ctx[28], ...args);
+    	}
 
     	const block = {
     		c: function create() {
+    			div2 = element("div");
+    			div0 = element("div");
     			p = element("p");
     			q = element("q");
-    			t = text(t_value);
+    			t0 = text(t0_value);
+    			t1 = space();
+    			div1 = element("div");
+    			span = element("span");
+    			span.textContent = "Remove";
     			attr_dev(q, "id", "b");
-    			attr_dev(q, "class", "svelte-173xkbd");
-    			add_location(q, file, 119, 25, 4834);
-    			attr_dev(p, "class", "acceptText svelte-173xkbd");
-    			add_location(p, file, 119, 3, 4812);
+    			attr_dev(q, "class", "svelte-e0or1i");
+    			add_location(q, file, 134, 60, 4849);
+    			attr_dev(p, "class", "acceptText svelte-e0or1i");
+    			add_location(p, file, 134, 37, 4826);
+    			attr_dev(div0, "class", "keptThoughts-item1 svelte-e0or1i");
+    			add_location(div0, file, 134, 5, 4794);
+    			attr_dev(span, "class", "svelte-e0or1i");
+    			add_location(span, file, 135, 37, 4922);
+    			attr_dev(div1, "class", "keptThoughts-item2 svelte-e0or1i");
+    			add_location(div1, file, 135, 5, 4890);
+    			attr_dev(div2, "class", "keptThoughts svelte-e0or1i");
+    			add_location(div2, file, 133, 4, 4762);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, p, anchor);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div0);
+    			append_dev(div0, p);
     			append_dev(p, q);
-    			append_dev(q, t);
+    			append_dev(q, t0);
+    			append_dev(div2, t1);
+    			append_dev(div2, div1);
+    			append_dev(div1, span);
+    			dispose = listen_dev(span, "click", click_handler_15, false, false, false);
     		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*thoughts*/ 8 && t_value !== (t_value = /*thought*/ ctx[25] + "")) set_data_dev(t, t_value);
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if (dirty & /*thoughts*/ 8 && t0_value !== (t0_value = /*thought*/ ctx[26] + "")) set_data_dev(t0, t0_value);
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(p);
+    			if (detaching) detach_dev(div2);
+    			dispose();
     		}
     	};
 
@@ -1525,7 +1540,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(119:2) {#each thoughts as thought}",
+    		source: "(133:3) {#each thoughts as thought, index}",
     		ctx
     	});
 
@@ -1566,10 +1581,10 @@ var app = (function () {
     			if (if_block5) if_block5.c();
     			t5 = space();
     			if (if_block6) if_block6.c();
-    			attr_dev(main, "class", "svelte-173xkbd");
-    			add_location(main, file, 27, 0, 533);
-    			attr_dev(body, "class", "svelte-173xkbd");
-    			add_location(body, file, 26, 0, 526);
+    			attr_dev(main, "class", "svelte-e0or1i");
+    			add_location(main, file, 30, 0, 550);
+    			attr_dev(body, "class", "svelte-e0or1i");
+    			add_location(body, file, 29, 0, 543);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1718,15 +1733,19 @@ var app = (function () {
 
     function instance($$self, $$props, $$invalidate) {
     	let step = "choose";
-    	let keepthought;
     	let letgothought;
-    	let randomThought;
+    	let keepthought;
+    	let thoughts = [];
 
-    	const setRandom = () => {
-    		randomThought = thoughts[Math.floor(Math.random() * thoughts.length)];
+    	let addThoughts = () => {
+    		$$invalidate(3, thoughts = [keepthought, ...thoughts]);
     	};
 
-    	let thoughts = [];
+    	let removeThought = index => {
+    		thoughts.splice(index, 1);
+    		$$invalidate(3, thoughts);
+    	};
+
     	let showFav;
     	const click_handler = () => $$invalidate(0, step = "writeletgo");
     	const click_handler_1 = () => $$invalidate(0, step = "writekeep");
@@ -1734,46 +1753,46 @@ var app = (function () {
 
     	const click_handler_3 = () => {
     		$$invalidate(0, step = "choose");
-    		$$invalidate(2, letgothought = "");
+    		$$invalidate(1, letgothought = "");
     	};
 
     	function textarea_input_handler() {
     		letgothought = this.value;
-    		$$invalidate(2, letgothought);
+    		$$invalidate(1, letgothought);
     	}
 
     	const click_handler_4 = () => $$invalidate(0, step = "acceptletgo");
 
     	const click_handler_5 = () => {
     		$$invalidate(0, step = "writeletgo");
-    		$$invalidate(2, letgothought = "");
+    		$$invalidate(1, letgothought = "");
     	};
 
     	const click_handler_6 = () => {
     		$$invalidate(0, step = "intospace");
-    		$$invalidate(2, letgothought = "");
+    		$$invalidate(1, letgothought = "");
     	};
 
     	const click_handler_7 = () => {
     		$$invalidate(0, step = "choose");
-    		$$invalidate(2, letgothought = "");
+    		$$invalidate(1, letgothought = "");
     	};
 
     	const click_handler_8 = () => $$invalidate(0, step = "choose");
 
     	const click_handler_9 = () => {
     		$$invalidate(0, step = "choose");
-    		$$invalidate(1, keepthought = "");
+    		$$invalidate(2, keepthought = "");
     	};
 
     	function textarea_input_handler_1() {
     		keepthought = this.value;
-    		$$invalidate(1, keepthought);
+    		$$invalidate(2, keepthought);
     	}
 
     	const click_handler_10 = () => {
     		$$invalidate(0, step = "acceptkeep");
-    		$$invalidate(3, thoughts = [keepthought, ...thoughts]);
+    		addThoughts();
     	};
 
     	const click_handler_11 = () => {
@@ -1781,20 +1800,22 @@ var app = (function () {
     	};
 
     	const click_handler_12 = () => {
-    		$$invalidate(1, keepthought = "");
     		$$invalidate(0, step = "writekeep");
+    		$$invalidate(2, keepthought = "");
     	};
 
     	const click_handler_13 = () => {
     		$$invalidate(0, step = "kept");
-    		$$invalidate(1, keepthought = "");
+    		$$invalidate(2, keepthought = "");
     	};
 
     	const click_handler_14 = () => {
     		$$invalidate(0, step = "acceptkeep");
     	};
 
-    	const click_handler_15 = () => {
+    	const click_handler_15 = index => removeThought(index);
+
+    	const click_handler_16 = () => {
     		$$invalidate(0, step = "choose");
     	};
 
@@ -1803,46 +1824,39 @@ var app = (function () {
     		fly,
     		scale,
     		step,
-    		keepthought,
     		letgothought,
-    		randomThought,
-    		setRandom,
+    		keepthought,
     		thoughts,
+    		addThoughts,
+    		removeThought,
     		bgAccept,
     		bgSpace,
     		bgKept,
-    		showFav,
-    		Math,
-    		console
+    		showFav
     	});
 
     	$$self.$inject_state = $$props => {
     		if ("step" in $$props) $$invalidate(0, step = $$props.step);
-    		if ("keepthought" in $$props) $$invalidate(1, keepthought = $$props.keepthought);
-    		if ("letgothought" in $$props) $$invalidate(2, letgothought = $$props.letgothought);
-    		if ("randomThought" in $$props) randomThought = $$props.randomThought;
+    		if ("letgothought" in $$props) $$invalidate(1, letgothought = $$props.letgothought);
+    		if ("keepthought" in $$props) $$invalidate(2, keepthought = $$props.keepthought);
     		if ("thoughts" in $$props) $$invalidate(3, thoughts = $$props.thoughts);
-    		if ("showFav" in $$props) $$invalidate(4, showFav = $$props.showFav);
+    		if ("addThoughts" in $$props) $$invalidate(4, addThoughts = $$props.addThoughts);
+    		if ("removeThought" in $$props) $$invalidate(5, removeThought = $$props.removeThought);
+    		if ("showFav" in $$props) $$invalidate(6, showFav = $$props.showFav);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*thoughts*/ 8) {
-    			 console.log(thoughts);
-    		}
-    	};
-
     	return [
     		step,
-    		keepthought,
     		letgothought,
+    		keepthought,
     		thoughts,
+    		addThoughts,
+    		removeThought,
     		showFav,
-    		randomThought,
-    		setRandom,
     		click_handler,
     		click_handler_1,
     		click_handler_2,
@@ -1860,7 +1874,8 @@ var app = (function () {
     		click_handler_12,
     		click_handler_13,
     		click_handler_14,
-    		click_handler_15
+    		click_handler_15,
+    		click_handler_16
     	];
     }
 

@@ -5,10 +5,19 @@
     let q 
     const limit = 1
     let apiKey = 'LHapcAM6q9szwBHIjLL8yUQtcTFSHleE'
-
     let gif 
-    let favorites = []
+    
+        const getImage = () => {
+            gif = null
+            fetch(`https://api.giphy.com/v1/gifs/search?q=${q}&limit=${limit}&apiKey=${apiKey}`) 
+            .then( res => res.json() )
+            .then( json => {
+                gif = json.data[0].images.downsized_medium.url
+                console.log(json)
+                })
+        }
 
+    let favorites = []
     const addToFav = (gif) => {
     if(!favorites.includes(gif)){
         favorites = [gif, ...favorites]
@@ -18,16 +27,6 @@
     }
 
     let showFav = false
-
-    const getImage = () => {
-        gif = null
-        fetch(`https://api.giphy.com/v1/gifs/search?q=${q}&limit=${limit}&apiKey=${apiKey}`) 
-        .then( res => res.json() )
-        .then( json => {
-            gif = json.data[0].images.downsized_medium.url
-            console.log(json)
-            })
-    }
     
 </script>
 

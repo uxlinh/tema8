@@ -14,6 +14,7 @@
 		return thoughts[ nr ]
 	}
 	$: console.log(thoughts)
+
 </script>
 
 <main>
@@ -60,7 +61,8 @@
 		<div class="acceptkeep">
 			<h1>accept keep</h1>
 			<p>{keepthought}</p>
-			<button on:click={ ()=> { keepthought = ''; step='choose' } }>more thoughts</button>		
+			<button on:click={ ()=> { keepthought = ''; step='choose' } }>more thoughts</button>
+
 			<button on:click={()=> { step='random'; keepthought = ''; setRandom() } }>random</button>		
 		</div>
 	{/if}
