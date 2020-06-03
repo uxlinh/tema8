@@ -1,5 +1,6 @@
 <script>
 	import {fade, fly, scale} from 'svelte/transition'; 
+	import { CloseSquareOutlineIcon } from 'svelte-eva-icons'
 	//steps: choose | writeletgo | writekeep | acceptletgo | acceptkeep | random | intospace
 	let step = 'choose'
 	let letgothought
@@ -34,14 +35,14 @@
 	<div class="choose">
 		<div class="letgo">
 			<h1 class="h1-start">Got some intrusive thoughts you want to let go?</h1>
-			<button class="btn-start" on:click={()=>step='writeletgo'}>Let go</button>
+			<button in:fade class="btn-start" on:click={()=>step='writeletgo'}>Let go</button>
 			<img class="img-letgo" src="./assets/dandelion.png" alt="Let Go Picture">
 		</div>
 
 		{#if !showFav} 
 			<div class="keep">
 				<h1 class="h1-start">Got some positive thoughts you want to keep?</h1>
-				<button class="btn-start" on:click={()=>step='writekeep'}>Keep</button>
+				<button in:fade class="btn-start" on:click={()=>step='writekeep'}>Keep</button>
 			{#if thoughts.length > 0}
 				<button class="btn-start" in:fade on:click={()=>step='kept'}>Kept</button>
 			{/if}
@@ -67,7 +68,7 @@
 		<div class="back" on:click={()=> { step='writeletgo'; letgothought = '' } }><img src="./assets/back.svg" alt="Arrow Back"></div>
 		<div class="acceptletgo" style="background-image: url('{bgAccept}')">
 				<div class="acceptGuidance">
-					<p class="acceptText"><q id="b">{letgothought}</q></p>
+					<p class="acceptText" in:fade><q id="b">{letgothought}</q></p>
 				</div>
 				<div class="acceptGuidance">
 					<h1 class="h1-write">Accept & Let go</h1>
@@ -132,11 +133,14 @@
 			<h1>Kept thoughts</h1>
 			{#each thoughts as thought, index}
 				<div class="keptThoughts">
-					<div class="keptThoughts-item1"><p class="acceptText"> <q id="b">{thought} </q> </p></div>
-					<div class="keptThoughts-item2"><span on:click={() => removeThought(index)}> Remove </span></div>
+					<div class="keptThoughts-item1">
+						<p class="keptThoughts-text" in:fade out:fade> <q id="b">{thought} </q> </p>
+						<div class="close" out:fade hover:red on:click={() => removeThought(index)}><CloseSquareOutlineIcon/> </div>	
+					</div>
+					<!-- <div class="keptThoughts-item2">
+					</div> -->
 				</div>	
-				
-			{/each}
+			{/each} 
 			<button on:click={ ()=> { step='choose' } }>Back to home</button>	
 		</div>
 	{/if}
@@ -176,6 +180,13 @@
 		align-items: center;
 		justify-content: center;
 	}
+	.close {
+		max-width: 2rem;
+		fill: rgba(245, 245, 245, 0.801);
+	}
+	.close:hover{
+		fill: white;
+	}
 	.back {
 		width: 11rem;
 		height: 2rem;
@@ -200,7 +211,7 @@
 	}
 	.writeletgo, .acceptGuidance, .writekeep, .kept, .intospace {
 		background-repeat: no-repeat;
-  		background-size: cover 100% 100%;
+  		background-size: cover;
 		height:100vh;
 		display:flex;
 		align-items: center;
@@ -215,7 +226,7 @@
 	}
 	div.keptThoughts {
 		display:grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr;
 		place-items: center;
 		max-width: 40rem;
 	}
@@ -223,13 +234,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 35rem;
+		max-width: 35rem;
 	}
-	div.keptThoughts-item2{
+	/* div.keptThoughts-item2{
 		display: flex;
 		align-items: center;
-		width: 5rem;
-	}
+		max-width: 5rem;
+	} */
 	.acceptletgo, .acceptkeep {
 		display:grid;
 		grid-template-columns: 1fr 1fr;
@@ -250,19 +261,22 @@
 		right: 0;
 	}
 
-	button, textarea, p.acceptText {
+	button, textarea, p.acceptText, p.keptThoughts-text {
 		padding: 0.8rem;
 		font-size: 1rem;
 		font-weight: 300;
 		border-radius: 0.8rem;
 		border: 0;
 	}
-	textarea, p.acceptText{
+	textarea, p.acceptText, p.keptThoughts-text{
 		background-color: rgba(245, 245, 245, 0.651)
 	}
 	button {
 		margin-top: 1rem;
 		background-color: rgba(245, 245, 245, 0.836)
+	}
+	button:hover{
+		background-color: white;
 	}
 	.btn-start {
 		z-index: 1;
@@ -295,7 +309,7 @@
 	p {
 		font-weight: 200;
 		font-size: 1.1rem;
-		margin: 1rem;
+		margin: 0.5rem;
 		color: white;
 	}
 
