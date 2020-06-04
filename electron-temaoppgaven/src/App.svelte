@@ -56,7 +56,7 @@
 
 <!-- Let go -->
 	{#if step=='writeletgo'}
-		<!-- <div class="logo"><img src="./assets/logo.svg" alt="Logo"></div> -->
+		<!-- <div class="logo"><imga src="./assets/logo.svg" alt="Logo"></div> -->
 		<div class="writeletgo">
 			<div class="back" on:click={()=> { step='choose'; letgothought = '' } }><ChevronLeftIcon/></div>
 			<h1 class="h1-write">Recognize your thoughts and write them down</h1>
@@ -101,7 +101,7 @@
 		<div class="back" on:click={()=> { step='choose'; keepthought = '' } }><ChevronLeftIcon/></div>
 		<div class="writekeep">		
 			<h1 class="h1-write">Write a positive thought or feedback you have received. For example: “What would your friends say about you?”</h1>
-			<textarea cols="45" rows="10" bind:value={keepthought} />
+			<textarea cols="45" rows="10" placeholder="Write something positive about yourself..." bind:value={keepthought} />
 			<button on:click={ () => { step='acceptkeep'; addThoughts(); }}>Keep thoughts</button>
 		</div>
 	{/if}
@@ -146,7 +146,6 @@
 
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
 
 	*,
 	*::after,
