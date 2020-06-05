@@ -801,12 +801,12 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[26] = list[i];
-    	child_ctx[28] = i;
+    	child_ctx[29] = list[i];
+    	child_ctx[31] = i;
     	return child_ctx;
     }
 
-    // (34:1) {#if step=='choose'}
+    // (40:1) {#if step=='choose'}
     function create_if_block_6(ctx) {
     	let div0;
     	let img0;
@@ -823,7 +823,7 @@ var app = (function () {
     	let img1_src_value;
     	let t5;
     	let dispose;
-    	let if_block = !/*showFav*/ ctx[6] && create_if_block_7(ctx);
+    	let if_block = !/*showFav*/ ctx[8] && create_if_block_7(ctx);
 
     	const block = {
     		c: function create() {
@@ -844,21 +844,21 @@ var app = (function () {
     			if (img0.src !== (img0_src_value = "./assets/feelfinelogo.svg")) attr_dev(img0, "src", img0_src_value);
     			attr_dev(img0, "alt", "Logo");
     			attr_dev(img0, "class", "svelte-fmmq8q");
-    			add_location(img0, file$2, 34, 19, 709);
+    			add_location(img0, file$2, 40, 19, 881);
     			attr_dev(div0, "class", "logo svelte-fmmq8q");
-    			add_location(div0, file$2, 34, 1, 691);
+    			add_location(div0, file$2, 40, 1, 863);
     			attr_dev(h1, "class", "h1-start svelte-fmmq8q");
-    			add_location(h1, file$2, 37, 3, 812);
+    			add_location(h1, file$2, 43, 3, 984);
     			attr_dev(button, "class", "btn-start svelte-fmmq8q");
-    			add_location(button, file$2, 38, 3, 889);
+    			add_location(button, file$2, 44, 3, 1061);
     			attr_dev(img1, "class", "img-letgo svelte-fmmq8q");
     			if (img1.src !== (img1_src_value = "./assets/dandelion.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "Let Go Picture");
-    			add_location(img1, file$2, 39, 3, 975);
+    			add_location(img1, file$2, 45, 3, 1147);
     			attr_dev(div1, "class", "letgo svelte-fmmq8q");
-    			add_location(div1, file$2, 36, 2, 789);
+    			add_location(div1, file$2, 42, 2, 961);
     			attr_dev(div2, "class", "choose svelte-fmmq8q");
-    			add_location(div2, file$2, 35, 1, 766);
+    			add_location(div2, file$2, 41, 1, 938);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -873,10 +873,10 @@ var app = (function () {
     			append_dev(div1, img1);
     			append_dev(div2, t5);
     			if (if_block) if_block.m(div2, null);
-    			dispose = listen_dev(button, "click", /*click_handler*/ ctx[7], false, false, false);
+    			dispose = listen_dev(button, "click", /*click_handler*/ ctx[10], false, false, false);
     		},
     		p: function update(ctx, dirty) {
-    			if (!/*showFav*/ ctx[6]) if_block.p(ctx, dirty);
+    			if (!/*showFav*/ ctx[8]) if_block.p(ctx, dirty);
     		},
     		i: function intro(local) {
     			if (!button_intro) {
@@ -902,14 +902,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(34:1) {#if step=='choose'}",
+    		source: "(40:1) {#if step=='choose'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (43:2) {#if !showFav}
+    // (49:2) {#if !showFav}
     function create_if_block_7(ctx) {
     	let div;
     	let h1;
@@ -936,15 +936,15 @@ var app = (function () {
     			t4 = space();
     			img = element("img");
     			attr_dev(h1, "class", "h1-start svelte-fmmq8q");
-    			add_location(h1, file$2, 44, 4, 1103);
+    			add_location(h1, file$2, 50, 4, 1275);
     			attr_dev(button, "class", "btn-start svelte-fmmq8q");
-    			add_location(button, file$2, 45, 4, 1178);
+    			add_location(button, file$2, 51, 4, 1350);
     			attr_dev(img, "class", "img-keep svelte-fmmq8q");
     			if (img.src !== (img_src_value = "./assets/keep.png")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Keep Picture");
-    			add_location(img, file$2, 49, 4, 1379);
+    			add_location(img, file$2, 55, 4, 1551);
     			attr_dev(div, "class", "keep svelte-fmmq8q");
-    			add_location(div, file$2, 43, 3, 1080);
+    			add_location(div, file$2, 49, 3, 1252);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -955,7 +955,7 @@ var app = (function () {
     			if (if_block) if_block.m(div, null);
     			append_dev(div, t4);
     			append_dev(div, img);
-    			dispose = listen_dev(button, "click", /*click_handler_1*/ ctx[8], false, false, false);
+    			dispose = listen_dev(button, "click", /*click_handler_1*/ ctx[11], false, false, false);
     		},
     		p: function update(ctx, dirty) {
     			if (/*thoughts*/ ctx[3].length > 0) {
@@ -995,14 +995,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(43:2) {#if !showFav}",
+    		source: "(49:2) {#if !showFav}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (47:3) {#if thoughts.length > 0}
+    // (53:3) {#if thoughts.length > 0}
     function create_if_block_8(ctx) {
     	let button;
     	let button_intro;
@@ -1013,11 +1013,11 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Kept";
     			attr_dev(button, "class", "btn-start svelte-fmmq8q");
-    			add_location(button, file$2, 47, 4, 1291);
+    			add_location(button, file$2, 53, 4, 1463);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
-    			dispose = listen_dev(button, "click", /*click_handler_2*/ ctx[9], false, false, false);
+    			dispose = listen_dev(button, "click", /*click_handler_2*/ ctx[12], false, false, false);
     		},
     		p: noop,
     		i: function intro(local) {
@@ -1039,14 +1039,14 @@ var app = (function () {
     		block,
     		id: create_if_block_8.name,
     		type: "if",
-    		source: "(47:3) {#if thoughts.length > 0}",
+    		source: "(53:3) {#if thoughts.length > 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (58:1) {#if step=='writeletgo'}
+    // (64:1) {#if step=='writeletgo'}
     function create_if_block_5(ctx) {
     	let div1;
     	let div0;
@@ -1055,6 +1055,10 @@ var app = (function () {
     	let t2;
     	let textarea;
     	let t3;
+    	let p;
+    	let t4;
+    	let t5;
+    	let t6;
     	let button;
     	let current;
     	let dispose;
@@ -1071,21 +1075,27 @@ var app = (function () {
     			t2 = space();
     			textarea = element("textarea");
     			t3 = space();
+    			p = element("p");
+    			t4 = text("Words: ");
+    			t5 = text(/*words1*/ ctx[4]);
+    			t6 = space();
     			button = element("button");
     			button.textContent = "I have recognised my thoughts";
     			attr_dev(div0, "class", "back svelte-fmmq8q");
-    			add_location(div0, file$2, 60, 3, 1629);
+    			add_location(div0, file$2, 66, 3, 1801);
     			attr_dev(h1, "class", "h1-write svelte-fmmq8q");
-    			add_location(h1, file$2, 61, 3, 1729);
+    			add_location(h1, file$2, 67, 3, 1901);
     			attr_dev(textarea, "cols", "45");
     			attr_dev(textarea, "rows", "10");
     			attr_dev(textarea, "placeholder", "Write down your thoughts...");
     			attr_dev(textarea, "class", "svelte-fmmq8q");
-    			add_location(textarea, file$2, 62, 3, 1802);
+    			add_location(textarea, file$2, 68, 3, 1974);
+    			attr_dev(p, "class", "svelte-fmmq8q");
+    			add_location(p, file$2, 69, 3, 2078);
     			attr_dev(button, "class", "btn-accept svelte-fmmq8q");
-    			add_location(button, file$2, 63, 3, 1905);
+    			add_location(button, file$2, 70, 3, 2104);
     			attr_dev(div1, "class", "writeletgo svelte-fmmq8q");
-    			add_location(div1, file$2, 59, 2, 1601);
+    			add_location(div1, file$2, 65, 2, 1773);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -1097,19 +1107,25 @@ var app = (function () {
     			append_dev(div1, textarea);
     			set_input_value(textarea, /*letgothought*/ ctx[1]);
     			append_dev(div1, t3);
+    			append_dev(div1, p);
+    			append_dev(p, t4);
+    			append_dev(p, t5);
+    			append_dev(div1, t6);
     			append_dev(div1, button);
     			current = true;
 
     			dispose = [
-    				listen_dev(div0, "click", /*click_handler_3*/ ctx[10], false, false, false),
-    				listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[11]),
-    				listen_dev(button, "click", /*click_handler_4*/ ctx[12], false, false, false)
+    				listen_dev(div0, "click", /*click_handler_3*/ ctx[13], false, false, false),
+    				listen_dev(textarea, "input", /*textarea_input_handler*/ ctx[14]),
+    				listen_dev(button, "click", /*click_handler_4*/ ctx[15], false, false, false)
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*letgothought*/ 2) {
+    			if (dirty[0] & /*letgothought*/ 2) {
     				set_input_value(textarea, /*letgothought*/ ctx[1]);
     			}
+
+    			if (!current || dirty[0] & /*words1*/ 16) set_data_dev(t5, /*words1*/ ctx[4]);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -1131,14 +1147,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(58:1) {#if step=='writeletgo'}",
+    		source: "(64:1) {#if step=='writeletgo'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (67:1) {#if step=='acceptletgo'}
+    // (74:1) {#if step=='acceptletgo'}
     function create_if_block_4(ctx) {
     	let div3;
     	let div0;
@@ -1190,29 +1206,29 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Accept & Let go";
     			attr_dev(div0, "class", "back svelte-fmmq8q");
-    			add_location(div0, file$2, 68, 4, 2124);
+    			add_location(div0, file$2, 75, 4, 2323);
     			attr_dev(q, "id", "b");
     			attr_dev(q, "class", "svelte-fmmq8q");
-    			add_location(q, file$2, 70, 35, 2273);
+    			add_location(q, file$2, 77, 35, 2472);
     			attr_dev(p0, "class", "acceptText svelte-fmmq8q");
-    			add_location(p0, file$2, 70, 5, 2243);
+    			add_location(p0, file$2, 77, 5, 2442);
     			attr_dev(div1, "class", "acceptGuidance svelte-fmmq8q");
-    			add_location(div1, file$2, 69, 4, 2209);
+    			add_location(div1, file$2, 76, 4, 2408);
     			attr_dev(h1, "class", "h1-write svelte-fmmq8q");
-    			add_location(h1, file$2, 73, 5, 2355);
+    			add_location(h1, file$2, 80, 5, 2554);
     			attr_dev(p1, "class", "svelte-fmmq8q");
-    			add_location(p1, file$2, 74, 5, 2402);
+    			add_location(p1, file$2, 81, 5, 2601);
     			attr_dev(p2, "class", "svelte-fmmq8q");
-    			add_location(p2, file$2, 75, 5, 2457);
+    			add_location(p2, file$2, 82, 5, 2656);
     			attr_dev(p3, "class", "svelte-fmmq8q");
-    			add_location(p3, file$2, 77, 5, 2565);
+    			add_location(p3, file$2, 84, 5, 2764);
     			attr_dev(button, "class", "svelte-fmmq8q");
-    			add_location(button, file$2, 79, 5, 2606);
+    			add_location(button, file$2, 86, 5, 2805);
     			attr_dev(div2, "class", "acceptGuidance svelte-fmmq8q");
-    			add_location(div2, file$2, 72, 4, 2321);
+    			add_location(div2, file$2, 79, 4, 2520);
     			attr_dev(div3, "class", "acceptletgo svelte-fmmq8q");
     			set_style(div3, "background-image", "url('" + bgAccept + "')");
-    			add_location(div3, file$2, 67, 2, 2050);
+    			add_location(div3, file$2, 74, 2, 2249);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -1237,12 +1253,12 @@ var app = (function () {
     			current = true;
 
     			dispose = [
-    				listen_dev(div0, "click", /*click_handler_5*/ ctx[13], false, false, false),
-    				listen_dev(button, "click", /*click_handler_6*/ ctx[14], false, false, false)
+    				listen_dev(div0, "click", /*click_handler_5*/ ctx[16], false, false, false),
+    				listen_dev(button, "click", /*click_handler_6*/ ctx[17], false, false, false)
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*letgothought*/ 2) set_data_dev(t1, /*letgothought*/ ctx[1]);
+    			if (!current || dirty[0] & /*letgothought*/ 2) set_data_dev(t1, /*letgothought*/ ctx[1]);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -1272,14 +1288,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(67:1) {#if step=='acceptletgo'}",
+    		source: "(74:1) {#if step=='acceptletgo'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (84:1) {#if step=='intospace'}
+    // (91:1) {#if step=='intospace'}
     function create_if_block_3(ctx) {
     	let div0;
     	let t0;
@@ -1303,14 +1319,14 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Back to home";
     			attr_dev(div0, "class", "back svelte-fmmq8q");
-    			add_location(div0, file$2, 84, 3, 2751);
+    			add_location(div0, file$2, 91, 3, 2950);
     			attr_dev(h1, "class", "svelte-fmmq8q");
-    			add_location(h1, file$2, 86, 4, 2922);
+    			add_location(h1, file$2, 93, 4, 3121);
     			attr_dev(button, "class", "svelte-fmmq8q");
-    			add_location(button, file$2, 87, 4, 2970);
+    			add_location(button, file$2, 94, 4, 3169);
     			attr_dev(div1, "class", "intospace svelte-fmmq8q");
     			set_style(div1, "background-image", "url('" + bgSpace + "')");
-    			add_location(div1, file$2, 85, 3, 2851);
+    			add_location(div1, file$2, 92, 3, 3050);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1323,8 +1339,8 @@ var app = (function () {
     			current = true;
 
     			dispose = [
-    				listen_dev(div0, "click", /*click_handler_7*/ ctx[15], false, false, false),
-    				listen_dev(button, "click", /*click_handler_8*/ ctx[16], false, false, false)
+    				listen_dev(div0, "click", /*click_handler_7*/ ctx[18], false, false, false),
+    				listen_dev(button, "click", /*click_handler_8*/ ctx[19], false, false, false)
     			];
     		},
     		p: noop,
@@ -1350,14 +1366,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(84:1) {#if step=='intospace'}",
+    		source: "(91:1) {#if step=='intospace'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (100:1) {#if step=='writekeep'}
+    // (107:1) {#if step=='writekeep'}
     function create_if_block_2(ctx) {
     	let div0;
     	let t0;
@@ -1366,6 +1382,10 @@ var app = (function () {
     	let t2;
     	let textarea;
     	let t3;
+    	let p;
+    	let t4;
+    	let t5;
+    	let t6;
     	let button;
     	let current;
     	let dispose;
@@ -1382,21 +1402,27 @@ var app = (function () {
     			t2 = space();
     			textarea = element("textarea");
     			t3 = space();
+    			p = element("p");
+    			t4 = text("Words: ");
+    			t5 = text(/*words2*/ ctx[5]);
+    			t6 = space();
     			button = element("button");
     			button.textContent = "Keep thoughts";
     			attr_dev(div0, "class", "back svelte-fmmq8q");
-    			add_location(div0, file$2, 100, 2, 3098);
+    			add_location(div0, file$2, 107, 2, 3297);
     			attr_dev(h1, "class", "h1-write svelte-fmmq8q");
-    			add_location(h1, file$2, 102, 3, 3225);
+    			add_location(h1, file$2, 109, 3, 3424);
     			attr_dev(textarea, "cols", "45");
     			attr_dev(textarea, "rows", "10");
     			attr_dev(textarea, "placeholder", "Write something positive about yourself...");
     			attr_dev(textarea, "class", "svelte-fmmq8q");
-    			add_location(textarea, file$2, 103, 3, 3364);
+    			add_location(textarea, file$2, 110, 3, 3563);
+    			attr_dev(p, "class", "svelte-fmmq8q");
+    			add_location(p, file$2, 111, 3, 3681);
     			attr_dev(button, "class", "svelte-fmmq8q");
-    			add_location(button, file$2, 104, 3, 3482);
+    			add_location(button, file$2, 112, 3, 3707);
     			attr_dev(div1, "class", "writekeep svelte-fmmq8q");
-    			add_location(div1, file$2, 101, 2, 3196);
+    			add_location(div1, file$2, 108, 2, 3395);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1408,19 +1434,25 @@ var app = (function () {
     			append_dev(div1, textarea);
     			set_input_value(textarea, /*keepthought*/ ctx[2]);
     			append_dev(div1, t3);
+    			append_dev(div1, p);
+    			append_dev(p, t4);
+    			append_dev(p, t5);
+    			append_dev(div1, t6);
     			append_dev(div1, button);
     			current = true;
 
     			dispose = [
-    				listen_dev(div0, "click", /*click_handler_9*/ ctx[17], false, false, false),
-    				listen_dev(textarea, "input", /*textarea_input_handler_1*/ ctx[18]),
-    				listen_dev(button, "click", /*click_handler_10*/ ctx[19], false, false, false)
+    				listen_dev(div0, "click", /*click_handler_9*/ ctx[20], false, false, false),
+    				listen_dev(textarea, "input", /*textarea_input_handler_1*/ ctx[21]),
+    				listen_dev(button, "click", /*click_handler_10*/ ctx[22], false, false, false)
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*keepthought*/ 4) {
+    			if (dirty[0] & /*keepthought*/ 4) {
     				set_input_value(textarea, /*keepthought*/ ctx[2]);
     			}
+
+    			if (!current || dirty[0] & /*words2*/ 32) set_data_dev(t5, /*words2*/ ctx[5]);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -1444,14 +1476,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(100:1) {#if step=='writekeep'}",
+    		source: "(107:1) {#if step=='writekeep'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (109:1) {#if step=='acceptkeep'}
+    // (117:1) {#if step=='acceptkeep'}
     function create_if_block_1(ctx) {
     	let div0;
     	let t0;
@@ -1497,26 +1529,26 @@ var app = (function () {
     			button1 = element("button");
     			button1.textContent = "See kept thoughts";
     			attr_dev(div0, "class", "back svelte-fmmq8q");
-    			add_location(div0, file$2, 109, 2, 3614);
+    			add_location(div0, file$2, 117, 2, 3839);
     			attr_dev(q, "id", "b");
     			attr_dev(q, "class", "svelte-fmmq8q");
-    			add_location(q, file$2, 112, 27, 3781);
+    			add_location(q, file$2, 120, 27, 4006);
     			attr_dev(p0, "class", "acceptText svelte-fmmq8q");
-    			add_location(p0, file$2, 112, 5, 3759);
+    			add_location(p0, file$2, 120, 5, 3984);
     			attr_dev(div1, "class", "acceptGuidance svelte-fmmq8q");
-    			add_location(div1, file$2, 111, 3, 3725);
+    			add_location(div1, file$2, 119, 3, 3950);
     			attr_dev(h1, "class", "h1-write svelte-fmmq8q");
-    			add_location(h1, file$2, 115, 5, 3860);
+    			add_location(h1, file$2, 123, 5, 4085);
     			attr_dev(p1, "class", "svelte-fmmq8q");
-    			add_location(p1, file$2, 116, 5, 3900);
+    			add_location(p1, file$2, 124, 5, 4125);
     			attr_dev(button0, "class", "svelte-fmmq8q");
-    			add_location(button0, file$2, 117, 5, 4030);
+    			add_location(button0, file$2, 125, 5, 4255);
     			attr_dev(button1, "class", "svelte-fmmq8q");
-    			add_location(button1, file$2, 118, 5, 4139);
+    			add_location(button1, file$2, 126, 5, 4364);
     			attr_dev(div2, "class", "acceptGuidance svelte-fmmq8q");
-    			add_location(div2, file$2, 114, 3, 3826);
+    			add_location(div2, file$2, 122, 3, 4051);
     			attr_dev(div3, "class", "acceptkeep svelte-fmmq8q");
-    			add_location(div3, file$2, 110, 2, 3697);
+    			add_location(div3, file$2, 118, 2, 3922);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1539,13 +1571,13 @@ var app = (function () {
     			current = true;
 
     			dispose = [
-    				listen_dev(div0, "click", /*click_handler_11*/ ctx[20], false, false, false),
-    				listen_dev(button0, "click", /*click_handler_12*/ ctx[21], false, false, false),
-    				listen_dev(button1, "click", /*click_handler_13*/ ctx[22], false, false, false)
+    				listen_dev(div0, "click", /*click_handler_11*/ ctx[23], false, false, false),
+    				listen_dev(button0, "click", /*click_handler_12*/ ctx[24], false, false, false),
+    				listen_dev(button1, "click", /*click_handler_13*/ ctx[25], false, false, false)
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty & /*keepthought*/ 4) set_data_dev(t1, /*keepthought*/ ctx[2]);
+    			if (!current || dirty[0] & /*keepthought*/ 4) set_data_dev(t1, /*keepthought*/ ctx[2]);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -1569,14 +1601,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(109:1) {#if step=='acceptkeep'}",
+    		source: "(117:1) {#if step=='acceptkeep'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (124:1) {#if step=='kept'}
+    // (132:1) {#if step=='kept'}
     function create_if_block(ctx) {
     	let div0;
     	let t0;
@@ -1618,14 +1650,14 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Back to home";
     			attr_dev(div0, "class", "back svelte-fmmq8q");
-    			add_location(div0, file$2, 124, 2, 4277);
+    			add_location(div0, file$2, 132, 2, 4502);
     			attr_dev(h1, "class", "svelte-fmmq8q");
-    			add_location(h1, file$2, 126, 3, 4425);
+    			add_location(h1, file$2, 134, 3, 4650);
     			attr_dev(button, "class", "svelte-fmmq8q");
-    			add_location(button, file$2, 137, 3, 4807);
+    			add_location(button, file$2, 145, 3, 5032);
     			attr_dev(div1, "class", "kept svelte-fmmq8q");
     			set_style(div1, "background-image", "url('" + bgKept + "')");
-    			add_location(div1, file$2, 125, 2, 4361);
+    			add_location(div1, file$2, 133, 2, 4586);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1644,12 +1676,12 @@ var app = (function () {
     			current = true;
 
     			dispose = [
-    				listen_dev(div0, "click", /*click_handler_14*/ ctx[23], false, false, false),
-    				listen_dev(button, "click", /*click_handler_16*/ ctx[25], false, false, false)
+    				listen_dev(div0, "click", /*click_handler_14*/ ctx[26], false, false, false),
+    				listen_dev(button, "click", /*click_handler_16*/ ctx[28], false, false, false)
     			];
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*removeThought, thoughts*/ 40) {
+    			if (dirty[0] & /*removeThought, thoughts*/ 136) {
     				each_value = /*thoughts*/ ctx[3];
     				validate_each_argument(each_value);
     				let i;
@@ -1711,20 +1743,20 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(124:1) {#if step=='kept'}",
+    		source: "(132:1) {#if step=='kept'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (128:3) {#each thoughts as thought, index}
+    // (136:3) {#each thoughts as thought, index}
     function create_each_block(ctx) {
     	let div2;
     	let div1;
     	let p;
     	let q;
-    	let t0_value = /*thought*/ ctx[26] + "";
+    	let t0_value = /*thought*/ ctx[29] + "";
     	let t0;
     	let p_intro;
     	let p_outro;
@@ -1736,7 +1768,7 @@ var app = (function () {
     	const closesquareoutlineicon = new CloseSquareOutlineIcon({ $$inline: true });
 
     	function click_handler_15(...args) {
-    		return /*click_handler_15*/ ctx[24](/*index*/ ctx[28], ...args);
+    		return /*click_handler_15*/ ctx[27](/*index*/ ctx[31], ...args);
     	}
 
     	const block = {
@@ -1751,16 +1783,16 @@ var app = (function () {
     			create_component(closesquareoutlineicon.$$.fragment);
     			attr_dev(q, "id", "b");
     			attr_dev(q, "class", "svelte-fmmq8q");
-    			add_location(q, file$2, 130, 53, 4608);
+    			add_location(q, file$2, 138, 53, 4833);
     			attr_dev(p, "class", "keptThoughts-text svelte-fmmq8q");
-    			add_location(p, file$2, 130, 6, 4561);
+    			add_location(p, file$2, 138, 6, 4786);
     			attr_dev(div0, "class", "close svelte-fmmq8q");
     			attr_dev(div0, "hover:red", "");
-    			add_location(div0, file$2, 131, 6, 4644);
+    			add_location(div0, file$2, 139, 6, 4869);
     			attr_dev(div1, "class", "keptThoughts-item1 svelte-fmmq8q");
-    			add_location(div1, file$2, 129, 5, 4522);
+    			add_location(div1, file$2, 137, 5, 4747);
     			attr_dev(div2, "class", "keptThoughts svelte-fmmq8q");
-    			add_location(div2, file$2, 128, 4, 4490);
+    			add_location(div2, file$2, 136, 4, 4715);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -1776,7 +1808,7 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if ((!current || dirty & /*thoughts*/ 8) && t0_value !== (t0_value = /*thought*/ ctx[26] + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty[0] & /*thoughts*/ 8) && t0_value !== (t0_value = /*thought*/ ctx[29] + "")) set_data_dev(t0, t0_value);
     		},
     		i: function intro(local) {
     			if (current) return;
@@ -1811,7 +1843,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(128:3) {#each thoughts as thought, index}",
+    		source: "(136:3) {#each thoughts as thought, index}",
     		ctx
     	});
 
@@ -1854,9 +1886,9 @@ var app = (function () {
     			t5 = space();
     			if (if_block6) if_block6.c();
     			attr_dev(main, "class", "svelte-fmmq8q");
-    			add_location(main, file$2, 32, 0, 661);
+    			add_location(main, file$2, 38, 0, 833);
     			attr_dev(body, "class", "svelte-fmmq8q");
-    			add_location(body, file$2, 31, 0, 654);
+    			add_location(body, file$2, 37, 0, 826);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1879,7 +1911,7 @@ var app = (function () {
     			if (if_block6) if_block6.m(main, null);
     			current = true;
     		},
-    		p: function update(ctx, [dirty]) {
+    		p: function update(ctx, dirty) {
     			if (/*step*/ ctx[0] == "choose") {
     				if (if_block0) {
     					if_block0.p(ctx, dirty);
@@ -2064,8 +2096,8 @@ var app = (function () {
 
     function instance($$self, $$props, $$invalidate) {
     	let step = "choose";
-    	let letgothought;
-    	let keepthought;
+    	let letgothought = "";
+    	let keepthought = "";
     	let thoughts = [];
 
     	let addThoughts = () => {
@@ -2164,7 +2196,10 @@ var app = (function () {
     		bgAccept,
     		bgSpace,
     		bgKept,
-    		showFav
+    		showFav,
+    		characters,
+    		words1,
+    		words2
     	});
 
     	$$self.$inject_state = $$props => {
@@ -2172,23 +2207,51 @@ var app = (function () {
     		if ("letgothought" in $$props) $$invalidate(1, letgothought = $$props.letgothought);
     		if ("keepthought" in $$props) $$invalidate(2, keepthought = $$props.keepthought);
     		if ("thoughts" in $$props) $$invalidate(3, thoughts = $$props.thoughts);
-    		if ("addThoughts" in $$props) $$invalidate(4, addThoughts = $$props.addThoughts);
-    		if ("removeThought" in $$props) $$invalidate(5, removeThought = $$props.removeThought);
-    		if ("showFav" in $$props) $$invalidate(6, showFav = $$props.showFav);
+    		if ("addThoughts" in $$props) $$invalidate(6, addThoughts = $$props.addThoughts);
+    		if ("removeThought" in $$props) $$invalidate(7, removeThought = $$props.removeThought);
+    		if ("showFav" in $$props) $$invalidate(8, showFav = $$props.showFav);
+    		if ("characters" in $$props) characters = $$props.characters;
+    		if ("words1" in $$props) $$invalidate(4, words1 = $$props.words1);
+    		if ("words2" in $$props) $$invalidate(5, words2 = $$props.words2);
     	};
+
+    	let characters;
+    	let words1;
+    	let words2;
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty[0] & /*letgothought*/ 2) {
+    			 characters = letgothought.length;
+    		}
+
+    		if ($$self.$$.dirty[0] & /*letgothought*/ 2) {
+    			 $$invalidate(4, words1 = letgothought.split(" ").length);
+    		}
+
+    		if ($$self.$$.dirty[0] & /*keepthought*/ 4) {
+    			 characters = keepthought.length;
+    		}
+
+    		if ($$self.$$.dirty[0] & /*keepthought*/ 4) {
+    			 $$invalidate(5, words2 = keepthought.split(" ").length);
+    		}
+    	};
 
     	return [
     		step,
     		letgothought,
     		keepthought,
     		thoughts,
+    		words1,
+    		words2,
     		addThoughts,
     		removeThought,
     		showFav,
+    		characters,
     		click_handler,
     		click_handler_1,
     		click_handler_2,
@@ -2214,7 +2277,7 @@ var app = (function () {
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance, create_fragment$2, safe_not_equal, {});
+    		init(this, options, instance, create_fragment$2, safe_not_equal, {}, [-1, -1]);
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,

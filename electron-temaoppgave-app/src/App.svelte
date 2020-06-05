@@ -4,9 +4,15 @@
 	import { ChevronLeftIcon } from 'svelte-eva-icons'
 	//steps: choose | writeletgo | writekeep | acceptletgo | acceptkeep | random | intospace
 	let step = 'choose'
-	let letgothought
+	let letgothought = ''
+	let keepthought = ''
 
-	let keepthought
+	$: characters = letgothought.length
+	$: words1 = letgothought.split(" ").length
+
+	$: characters = keepthought.length
+	$: words2 = keepthought.split(" ").length
+
 	let thoughts = []
 	let addThoughts = () => {
 		thoughts = [keepthought, ...thoughts]
@@ -60,7 +66,8 @@
 		<div class="writeletgo">
 			<div class="back" on:click={()=> { step='choose'; letgothought = '' } }><ChevronLeftIcon/></div>
 			<h1 class="h1-write">Recognize your thoughts and write them down</h1>
-			<textarea cols="45" rows="10" bind:value={letgothought} placeholder="Write down your thoughts..."/>
+			<textarea cols="45" rows="10"  bind:value={letgothought} placeholder="Write down your thoughts..."/>
+			<p>Words: {words1}</p>
 			<button class="btn-accept" on:click={()=>step='acceptletgo'}>I have recognised my thoughts</button>
 		</div>
 	{/if}
@@ -102,6 +109,7 @@
 		<div class="writekeep">		
 			<h1 class="h1-write">Write a positive thought or feedback you have received. For example: “What would your friends say about you?”</h1>
 			<textarea cols="45" rows="10" placeholder="Write something positive about yourself..." bind:value={keepthought} />
+			<p>Words: {words2}</p>
 			<button on:click={ () => { step='acceptkeep'; addThoughts(); }}>Keep thoughts</button>
 		</div>
 	{/if}
